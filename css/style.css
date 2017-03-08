@@ -12,7 +12,7 @@ body{
 
 h1{
 	font-size: 1.8em;
-	text-align: center-left;
+	text-align: left;
 	margin-bottom: 5px; 
 	margin-top: 5px;
 }
@@ -89,41 +89,39 @@ nav li{
 	text-decoration:none;
 }
 
+#main {
+  width: 99%;
+  margin: 10px
+}
+
 #searchBar{
-	margin-left: 0.5em;
-	margin-right: 5em;
+  width: 100%;
 	margin-bottom: 0.8em;
-	padding-top: 1em;
-	overflow: auto;
 	background-color: #FBFDFC;
-	padding-right: 1.5em;
-	padding-left: 1.5em;
 }
 
 #center{
-	margin-left: 0.5em;
-	margin-right: 5em;
 	margin-bottom: 0.8em;
-	padding-top: 1em;
+	padding: 1em 1.5em;
 	overflow: auto;
 	background-color: #efefef;
-	padding-right: 1.5em;
-	padding-left: 1.5em;
 	border: solid;
 	border-color: #dbdbdb;
 	border-width: thin;
 }
 
 #left-sidebar{
-	margin: 0em 0.8em 0.8em 0.2em;
 	padding:0.5em 1em 1em 1em;
 	height: 200px;
-	float: left;
 	background-color: #efefef;
-	width: 115px;
 	border: solid;
 	border-color: #dbdbdb;
 	border-width: thin;
+}
+#right-sidebar {
+  padding: 0.5em 1em 1em 1em;
+  background-color: #efefef;
+  border: 1px solid #dbdbdb
 }
 
 .entry{
@@ -136,7 +134,7 @@ nav li{
 
 #post-types{
 	list-style-type: none;
-	padding-left: 0pt;
+	padding-left: 0;
 }
 
 #first{
@@ -166,7 +164,6 @@ footer{
 	border-bottom: solid;
 	border-bottom-width: thin;
 	border-bottom-color: #dbdbdb;
-	
 }
 
 .footer-section{
@@ -194,6 +191,24 @@ footer{
 /*form stuff*/
 
 
+
+.form-row {
+  width: 100%;
+  padding: 10px 0;
+}
+.form-row label.top {
+  display: block;
+}
+.form-row label {
+  display: inline-block;
+}
+
+#side-bar-new-post input:not(#np-image),
+#side-bar-new-post textarea {
+  width: 92%;
+  padding: 7px 4%;
+  margin-top: 3px;
+}
 
 #search[type=text] {
   width: 40%;
@@ -249,7 +264,98 @@ input[type=file]{
 }
 
 #search[type=text]:focus {
-    width: 87%;
+    width: 65%;
+}
+
+/* ************************************ *\
+ * Utility Classes (based on bootstrap) *
+\* ************************************ */
+
+/* Gives parents of floated children a height */
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* Responsive width styles based on a 12-grid system */
+.container-fluid {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.grid-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col, .col-3, .col-4, .col-6, .col-8, .col-9, .col-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col {
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.col-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.333333%;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-6 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-8 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 66.666667%;
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+.col-9 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-12 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 
@@ -305,8 +411,7 @@ legend{
 
 #posts{
 	padding-left: 8em;
-	border: solid:;
-	border-color:black;
+	border: 1px solid #000;
 }
 .postEntry{
 
