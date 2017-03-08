@@ -1,0 +1,15 @@
+TO DO:
+
+Write ups
+Make contact us form centered
+make log in form centered
+home third column stuff
+make the search button in the footer link to the search bar on home page
+fix weird spacing on create an account form
+hover color on submit buttons -> #FF3B3F; with white text
+make choose file button pretty background color to our grey, font family)
+
+
+later maybe:
+click profile picture -> open bigger window
+add thumbs up icon and rating beside posts

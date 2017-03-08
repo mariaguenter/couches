@@ -206,7 +206,7 @@ footer{
 	border-width: thin;
 	border-color: #dbdbdb;
 	background-color: white;
-  background-image: url('../images/searchicon.png');
+	background-image: url('../images/searchicon.png');
 	background-size: 20px 20px;
 	background-position: 5px 4px;
 	background-repeat: no-repeat;
@@ -225,6 +225,27 @@ input[type=submit]{
 	background-color:#CAEBF2;
 	font-family: 'Playfair Display', sans-serif;
 	/*hover color */
+}
+
+input[type=text], input[type=email], input[type=password], select{
+	height: 1.4em;
+	border: solid;
+	border-width: thin;
+	border-color:#dbdbdb;
+	border-radius: 3px;
+	margin-top:-1em;
+	font-family: 'Playfair Display', sans-serif;
+	color: black;
+}
+
+select{
+	height: 1.8em;
+}
+
+input[type=file]{
+	height: 1.4em;
+	margin-top:-1em;
+	font-family: 'Playfair Display', sans-serif;
 }
 
 #search[type=text]:focus {
@@ -255,6 +276,7 @@ input[type=submit]{
 legend{
 	font-size: 26px;
 	padding-left: 1em;
+	padding-bottom: 0.5em;
 }
 
 /*login page*/
