@@ -1,4 +1,4 @@
-h1, h2, body, p, i {
+h1, h2, h3, body, p, i {
 	font-family: 'Playfair Display', sans-serif;
 	color: #474747;
 }
@@ -23,6 +23,22 @@ h2{
 	border-width: 1.5px;
 	border-color: #CAEBF2;
 	padding-top: 1em; 
+}
+
+h3{
+	font-size: 26px;
+	padding-top: 1em; 
+	color: #FF3B3F;
+}
+
+h4{
+	font-size: 1.5em;
+	padding-left: 5.5em;
+	border-top: solid;
+	border-width: 1.5px;
+	border-color: #CAEBF2;
+	padding-top: 1em; 
+	margin-top: 7em;
 }
 
 p{
@@ -245,3 +261,37 @@ legend{
 #forgot{
 	text-align: left;
 }
+
+
+/*profile page*/
+#centerProfile{
+	margin-left: 0.7em;
+	margin-right: 0.7em;
+	margin-bottom: 0.8em;
+	background-color: #efefef;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	padding-bottom: 1.5em;
+	border: solid;
+	border-color: #dbdbdb;
+	border-width: thin;
+}
+
+#edit{
+	font-size: 16px;
+}
+
+#posts{
+	padding-left: 8em;
+	border: solid:;
+	border-color:black;
+}
+.postEntry{
+
+	clear:both;
+}
+
+#profileEntry img{
+	height: 200px;
+}
+
