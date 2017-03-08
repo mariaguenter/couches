@@ -358,12 +358,13 @@ input[type=file]{
 /*Contact Us page*/
 #parent{
 	text-align: center;
+
 }
 
 #contactMain{
-	display: inline-block;
 	padding-bottom: 2em;
 	padding-top: 1.5em;
+
 }
 .contactFields{
 	font-size: 14pt;
@@ -372,15 +373,18 @@ input[type=file]{
 	width: 150px;
 }
 
+
 legend{
 	font-size: 26px;
 	padding-left: 1em;
 	padding-bottom: 0.5em;
+	margin:auto;
 }
 
 /*login page*/
 #forgot{
-	text-align: left;
+	text-align: center;
+	
 }
 
 
