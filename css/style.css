@@ -5,6 +5,7 @@ h1, h2, body, p, i {
 
 body{
 	background-color: #FBFDFC;
+	margin: 0;
 }
 
 h1{
@@ -24,23 +25,14 @@ h2{
 }
 
 #logo{
-	height: 240%;
-	width: 10%;
+	height: 220%;
 	margin-top: -2.2em;
 	padding-left: 1em;
-	display: inline-block;
 }
 
 body{
 	font-size: 0.9em;
 	min-width: 50em;
-}
-
-nav{
-	text-align:right;
-	padding-right: 5em;
-	font-size: 1.5em;
-	display: inline-block;
 }
 
 nav li{
@@ -65,11 +57,8 @@ p{
 
 
 
-#masthead{
-	height: 50px;
-	margin-top: -10px;
-	margin-left: -10px;
-	margin-right: -10px;
+#masthead {
+	height: 55px;
 	margin-bottom: 0.8em;
 	background-color: #f5f5f5;
 	border-bottom: solid;
@@ -78,18 +67,11 @@ p{
 	padding-bottom:1em;
 }
 nav{
-	text-align:right;
-	padding-right: 5em;
 	font-size: 1.5em;
-	margin-top: -0.9em;
+	margin: 42px 10% 0 0;
+	float: right;
 }
 
-nav li{
-	list-style-type: none;
-	display: inline;
-	padding-left: 2em;
-
-}
 
 a{
 	text-decoration:none;
