@@ -68,7 +68,7 @@ p{
 }
 nav{
 	font-size: 1.5em;
-	margin: 42px 10% 0 0;
+	margin: 18px 10% 0 0;
 	float: right;
 }
 
@@ -177,9 +177,9 @@ form{
 	margin-left: auto;
 }
 input[type=text] {
-    width: 40%;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+	width: 40%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
 	padding: 0.2em 0 0.2em 0;
 	font-size:1.2em;
 	color: #474747;
@@ -187,11 +187,11 @@ input[type=text] {
 	border-width: thin;
 	border-color: #dbdbdb;
 	background-color: white;
-    background-image: url('searchicon.png');
+	background-image: url('../img/searchicon.png');
 	background-size: 20px 20px;
-    background-position: 5px 4px; 
-    background-repeat: no-repeat;
-    padding-left: 30px;
+	background-position: 5px 4px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
 	border-radius: 3px;
 	font-family: 'Playfair Display', sans-serif;
 }
@@ -210,12 +210,3 @@ input[type=submit]{
 input[type=text]:focus {
     width: 87%;
 }
-
-
-
-
-
-
-
-
-
