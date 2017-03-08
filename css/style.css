@@ -175,11 +175,9 @@ footer{
 
 
 
+/*form stuff*/
 
 
-form{
-	margin-left: auto;
-}
 
 #search[type=text] {
   width: 40%;
@@ -202,9 +200,10 @@ form{
 }
 
 input[type=submit]{
-	font-size:1.2em;	
+	font-size:13pt;	
 	border: solid;
-	border-color: #CAEBF2;
+	border-width: thin;
+	border-color: #BCDAE0;
 	border-radius: 3px;
 	color: #474747;
 	background-color:#CAEBF2;
@@ -214,4 +213,35 @@ input[type=submit]{
 
 #search[type=text]:focus {
     width: 87%;
+}
+
+
+
+
+
+/*Contact Us page*/
+#parent{
+	text-align: center;
+}
+
+#contactMain{
+	display: inline-block;
+	padding-bottom: 2em;
+	padding-top: 1.5em;
+}
+.contactFields{
+	font-size: 14pt;
+	text-align: left;
+	display: inline-block;
+	width: 150px;
+}
+
+legend{
+	font-size: 26px;
+	padding-left: 1em;
+}
+
+/*login page*/
+#forgot{
+	text-align: left;
 }

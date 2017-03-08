@@ -3,35 +3,50 @@
 <head lang="en">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
    <meta charset="utf-8">
-   <title>Home</title>
+   <title>Contact Us</title>
    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header id="masthead">
-	<img id="logo" src="logo.png" alt="Kitty Threads" />
+<header id="header">
+	<img id="logo" src="images/logo.png" alt="Kitty Threads" />
 	<nav>
 		<ul>
-			<li><a href="#">home</a></li>
+			<li><a href="home.html">home</a></li>
 			<li><a href="#">profile</a></li>
-			<li><a href="#">log in</a></li>
+			<li><a href="login.html">log in</a></li>
 		</ul>
 	</nav>
 </header>
-<div id="main">
-<form action="">
-	<legend>Contact Us:</label>
+<div id="parent">
+<div id="contactMain">
+<form action="" id = "contactForm">
+	<legend>Contact Us</legend>
 	<p>
-		<label>Email:</label>
-		<input type="text" name="emai" />
-
-
+		<label class = "contactFields">Email:</label>
+		<input type="email" name="email" />
+	</p>
+	<p>
+		<label class = "contactFields">Name:</label>
+		<input type="text" name="name" />
+	</p>
+	<p>
+		<label class = "contactFields">Subject:</label>
+		<input type="text" name="subject" />
+	</p>	
+	<p>
+		<label class = "contactFields">Message:</label>
+		<input type="text" name="message" /> <!--MAKE TEXT ARE OR SOMETHING-->
+		
+	</p>
+	<input type = "submit"/>
+</form>
 
 </div>
-
+</div>
 <footer>
    <div class="footer-section">
 		<p>
-			<a href="#">home</a>  | <a href="#">profile</a>| <a href="#">search</a>  | <a href="#">login</a>  | <a href="#">contact</a>
+			<a href="home.html">home</a>  | <a href="#">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
 		</p>
 		<i><small>Copyright © 2017 Maria Guenter</small></i>
    </div>
