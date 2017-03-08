@@ -1,13 +1,15 @@
 TO DO:
 
-Write ups
+Write ups (mardog got this)
 Make contact us form centered
 make log in form centered
-home third column stuff
 make the search button in the footer link to the search bar on home page
 fix weird spacing on create an account form
 hover color on submit buttons -> #FF3B3F; with white text
-make choose file button pretty background color to our grey, font family)
+make the search bar wider when clicked
+contact page make "message" a text area thingy not just text
+make the labels on all forms (log in and contact) on top not beside (use mat's top class)
+CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it. nothing fancy 
 
 
 later maybe:
