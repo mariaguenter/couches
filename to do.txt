@@ -1,13 +1,12 @@
 TO DO:
 
-Write ups (mardog got this)
-make the search button in the footer link to the search bar on home page
-hover color on submit buttons -> #FF3B3F; with white text
+make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
+fix home page so it works on maria's screen (mat)
 make the search bar wider when clicked
 contact page make "message" a text area thingy not just text
 make the labels on all forms (log in and contact) on top not beside (use mat's top class??)
 CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it. nothing fancy 
-Thread post page?!? maybe??
+CLIENT SIDE SECURITY all scott said was we need to od client side hash passwords. but idk how since we arent doing anything with the passwords or forms yet so idk what we would do here. I vote we just ignore it so yolo
 
 
 later maybe:

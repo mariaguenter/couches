@@ -232,7 +232,12 @@ input[type=submit]{
 	color: #474747;
 	background-color:#CAEBF2;
 	font-family: 'Playfair Display', sans-serif;
-	/*hover color */
+	
+}
+input[type=submit]:hover{
+	background-color: #FF3B3F;
+	border-color:  #FF3B3F;
+	color: white;
 }
 
 input[type=text], input[type=email], input[type=password], select{
