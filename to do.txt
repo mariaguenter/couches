@@ -6,7 +6,7 @@ make the search bar wider when clicked
 contact page make "message" a text area thingy not just text
 make the labels on all forms (log in and contact) on top not beside (use mat's top class??)
 CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it. nothing fancy (JUST JAVA SCRIPT) 
-CLIENT SIDE SECURITY all scott said was we need to od client side hash passwords. but idk how since we arent doing anything with the passwords or forms yet so idk what we would do here. I vote we just ignore it so yolo
+
 
 
 later maybe:
