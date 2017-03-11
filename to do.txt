@@ -1,17 +1,15 @@
 TO DO:
 
-Write ups (mardog got this)
-Make contact us form centered
-make log in form centered
-make the search button in the footer link to the search bar on home page
-fix weird spacing on create an account form
-hover color on submit buttons -> #FF3B3F; with white text
+
+fix home page so it works on maria's screen (mat)
 make the search bar wider when clicked
 contact page make "message" a text area thingy not just text
-make the labels on all forms (log in and contact) on top not beside (use mat's top class)
-CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it. nothing fancy 
+change picture upload buttons
+CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it (oh and check that password and confirm apssword are the same). nothing fancy (JUST JAVA SCRIPT)
+
 
 
 later maybe:
 click profile picture -> open bigger window
 add thumbs up icon and rating beside posts
+make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
