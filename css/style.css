@@ -119,7 +119,8 @@ nav li{
 #right-sidebar {
   padding: 0.5em 1em 1em 1em;
   background-color: #efefef;
-  border: 1px solid #dbdbdb
+  border: 1px solid #dbdbdb;
+  margin-bottom: 0.8em;
 }
 
 .entry{
@@ -478,4 +479,17 @@ http://css3buttongenerator.com/*/
   background-image: -o-linear-gradient(top, #ffffff, #dedede);
   background-image: linear-gradient(to bottom, #ffffff, #dedede);
   text-decoration: none;
+}
+
+
+
+
+
+
+/*Images*/
+#sleepy{
+	width:100%;
+	height:23%;
+	padding-top: 8%;
+	
 }
