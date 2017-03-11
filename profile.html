@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-   <meta charset="utf-8">
-   <title>Profile</title>
-   <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-<header id="header">
-  <img id="logo" src="images/logo.png" alt="Kitty Threads" />
-  <nav>
-    <ul>
-      <li><a href="home.html">home</a></li>
-      <li><a href="profile.html">profile</a></li>
-      <li><a href="login.html">log in</a></li>
-    </ul>
-  </nav>
-</header>
-<article id="centerProfile">
-<div id="profileEntry">
-   <figure>
-      <img src="images/blank.jpg" alt="profile picture" /><!--make open in pop up-->
-   </figure>
-   <div>
-    <h3>Firstname Lastname</h3>
-    <p id="edit"><a href = "#">edit</a></p>
-   </div>
-</div>
-<br/>
+  <head lang="en">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<h4>Posts</h4>
-<div id="posts">
-<div class="postEntry"><!-- eventually add thumbs up feature-->
-   <figure>
-      <img src="images/blank.jpg" alt="" />
-   </figure>
-   <div>
-      <h2 id = "first"><a href ="#">Thread Title</a></h2>
-      <p><a href="#">author</a>    |        date/time</p>
-    <p class="comments">nummber of comments</p>
-   </div>
-</div>
-<div class="postEntry"><!-- eventually add thumbs up feature-->
-   <figure>
-      <img src="images/blank.jpg" alt="" />
-   </figure>
-   <div>
-      <h2 id = "first"><a href ="#">Thread Title</a></h2>
-      <p><a href="#">author</a>    |        date/time</p>
-    <p class="comments">nummber of comments</p>
-   </div>
-</div>
-<div class="postEntry"><!-- eventually add thumbs up feature-->
-   <figure>
-      <img src="images/blank.jpg" alt="" />
-   </figure>
-   <div>
-      <h2 id = "first"><a href ="#">Thread Title</a></h2>
-      <p><a href="#">author</a>    |        date/time</p>
-    <p class="comments">nummber of comments</p>
-   </div>
-</div>
-</div>
+  <body>
+    <header id="header">
+      <img id="logo" src="images/logo.png" alt="Kitty Threads" />
+      <nav>
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="profile.html">profile</a></li>
+          <li><a href="login.html">log in</a></li>
+        </ul>
+      </nav>
+    </header>
 
-</article>
-<footer>
-   <div class="footer-section">
-    <p>
-      <a href="home.html">home</a>  | <a href="#">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
-    </p>
-    <i><small>Copyright © 2017 Maria Guenter</small></i>
-   </div>
-</footer>
+    <article id="centerProfile">
+      <div id="profileEntry">
+        <figure>
+          <img src="images/blank.jpg" alt="profile picture" /><!--make open in pop up-->
+        </figure>
+        <div>
+          <h3>Firstname Lastname</h3>
+          <p id="edit"><a href = "#">edit</a></p>
+        </div>
+      </div>
+      <br/>
 
-</body>
+      <h4>Posts</h4>
+      <div id="posts">
+        <div class="postEntry"><!-- eventually add thumbs up feature-->
+          <figure>
+            <img src="images/blank.jpg" alt="" />
+          </figure>
+          <div>
+            <h2 id = "first"><a href ="#">Thread Title</a></h2>
+            <p><a href="#">author</a>    |        date/time</p>
+            <p class="comments">nummber of comments</p>
+          </div>
+        </div>
+        <div class="postEntry"><!-- eventually add thumbs up feature-->
+          <figure>
+            <img src="images/blank.jpg" alt="" />
+          </figure>
+          <div>
+            <h2 id = "second"><a href ="#">Thread Title</a></h2>
+            <p><a href="#">author</a>    |        date/time</p>
+            <p class="comments">nummber of comments</p>
+          </div>
+        </div>
+        <div class="postEntry"><!-- eventually add thumbs up feature-->
+          <figure>
+            <img src="images/blank.jpg" alt="" />
+          </figure>
+          <div>
+            <h2 id = "third"><a href ="#">Thread Title</a></h2>
+            <p><a href="#">author</a>    |        date/time</p>
+            <p class="comments">nummber of comments</p>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <footer>
+      <div class="footer-section">
+        <p>
+          <a href="home.html">home</a>  | <a href="#">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
+        </p>
+        <i><small>Copyright © 2017 Maria Guenter</small></i>
+      </div>
+    </footer>
+
+  </body>
 </html>

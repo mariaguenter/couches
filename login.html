@@ -1,97 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-   <meta charset="utf-8">
-   <title>Login</title>
-   <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-<header id="header">
-  <img id="logo" src="images/logo.png" alt="Kitty Threads" />
-  <nav>
-    <ul>
-      <li><a href="home.html">home</a></li>
-      <li><a href="profile.html">profile</a></li>
-      <li><a href="login.html">log in</a></li>
-    </ul>
-  </nav>
-</header>
-<div id="parent">
-<div id="contactMain">
-<form action="" id = "contactForm">
-  <legend>login</legend>
-  <p>
-    <label class = "contactFields">username:</label>
-    <input type="text" name="username" />
-  </p>
-  <p>
-    <label class = "contactFields">password:</label>
-    <input type="password" name="password" />
-  </p>
-  <input type = "submit" value="login"/>
-</form>
+  <head lang="en">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<p id="forgot">
-  <a href="#">forgot your password?</a>
-</p>
-<br/>
-<form action="" id = "contactForm">
-  <legend>create an account</legend
-  <p>
-    <label class = "contactFields">first name</label>
-    <input type="text" name="fname" />
-  </p>
-  <p>
-    <label class = "contactFields">last name</label>
-    <input type="text" name="lname" />
-  </p>
-  <p>
-    <label class = "contactFields">email:</label>
-    <input type="email" name="email" />
-  </p>
-  <p>
-    <label class = "contactFields">username:</label>
-    <input type="text" name="username" />
-  </p>
-  <p>
-    <label class = "contactFields">password:</label>
-    <input type="password" name="password" />
-  </p>
-  <p>
-    <label class = "contactFields">confirm password:</label>
-    <input type="password" name="confirmPassword" />
-  </p>
-  <p>
-    <label class = "contactFields">secuirty question:</label>
-    <select name="question">
-      <option value = "breed">What is the breed of you current cat?</option>
-      <option value = "name">What was your first cat's name?</option>
-      <option value = "sum">How many cats have you owned?</option>
-      <option value = "artist">If you could name your cat after a celebrity, who would it be?</option>
-    </select>
-  </p>
-  <p>
-    <label class = "contactFields">answer:</label>
-    <input type="text" name="answer" />
-  </p>
-  <p>
-    <label class = "contactFields">picture:</label>
-    <input type="file" name="profilePic"  accept="image/*" />
-  </p>
-  <input type = "submit" value="create account"/>
-</form>
-</div>
+  <body>
+    <header id="header">
+      <img id="logo" src="images/logo.png" alt="Kitty Threads" />
+      <nav>
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="profile.html">profile</a></li>
+          <li><a href="login.html">log in</a></li>
+        </ul>
+      </nav>
+    </header>
 
-</div>
-<footer>
-   <div class="footer-section">
-    <p>
-      <a href="home.html">home</a>  | <a href="profile.html">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
-    </p>
-    <i><small>Copyright © 2017 Maria Guenter</small></i>
-   </div>
-</footer>
+    <div id="parent">
+      <div id="contactMain">
 
-</body>
+        <form action="" id = "loginForm">
+          <legend>login</legend>
+          <p>
+            <label class = "contactFields">username:</label>
+            <input type="text" name="username" />
+          </p>
+          <p>
+            <label class = "contactFields">password:</label>
+            <input type="password" name="password" />
+          </p>
+          <input type = "submit" value="login"/>
+        </form>
+
+        <p id="forgot">
+          <a href="#">forgot your password?</a>
+        </p>
+        <br/>
+
+        <form action="" id = "createAccountForm">
+          <legend>create an account</legend>
+          <p>
+            <label class = "contactFields">first name</label>
+            <input type="text" name="fname" />
+          </p>
+          <p>
+            <label class = "contactFields">last name</label>
+            <input type="text" name="lname" />
+          </p>
+          <p>
+            <label class = "contactFields">email:</label>
+            <input type="email" name="email" />
+          </p>
+          <p>
+            <label class = "contactFields">username:</label>
+            <input type="text" name="username" />
+          </p>
+          <p>
+            <label class = "contactFields">password:</label>
+            <input type="password" name="password" />
+          </p>
+          <p>
+            <label class = "contactFields">confirm password:</label>
+            <input type="password" name="confirmPassword" />
+          </p>
+          <p>
+            <label class = "contactFields">secuirty question:</label>
+            <select name="question">
+              <option value = "breed">What is the breed of you current cat?</option>
+              <option value = "name">What was your first cat's name?</option>
+              <option value = "sum">How many cats have you owned?</option>
+              <option value = "artist">If you could name your cat after a celebrity, who would it be?</option>
+            </select>
+          </p>
+          <p>
+            <label class = "contactFields">answer:</label>
+            <input type="text" name="answer" />
+          </p>
+          <p>
+            <label class = "contactFields">picture:</label>
+            <input type="file" name="profilePic"  accept="image/*" />
+          </p>
+          <input type = "submit" value="create account"/>
+        </form>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-section">
+        <p>
+          <a href="home.html">home</a>  | <a href="profile.html">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
+        </p>
+        <i><small>Copyright © 2017 Maria Guenter</small></i>
+      </div>
+    </footer>
+
+  </body>
 </html>
