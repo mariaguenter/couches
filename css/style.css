@@ -264,6 +264,10 @@ input[type=file]{
   margin-left:-10.3em;
 }
 
+#np-image{
+	margin-left: -6.8em;
+}
+
 #search[type=text]:focus {
     width: 80%;
 }
