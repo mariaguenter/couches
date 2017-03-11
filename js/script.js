@@ -32,4 +32,22 @@ $(document).ready(function() {
     $('#' + id).click();
   });
 
+  $('form').on('submit', function(e) {
+    var valid = true;
+
+    $('input', $(this)).each(function() {
+      if ($(this).attr('type') !== 'submit') {
+        if ($(this).val() === '' || $(this).val() === null) {
+          valid = false;
+        }
+      }
+    });
+
+    if (!valid) {
+      alert("All fields must be filled.");
+      return false;
+    }
+
+  });
+
 });
