@@ -33,8 +33,21 @@ $(document).ready(function() {
   });
 
   $('form').on('submit', function(e) {
-    e.preventDefault();
-    console.log($(this));
+    var valid = true;
+
+    $('input', $(this)).each(function() {
+      if ($(this).attr('type') !== 'submit') {
+        if ($(this).val() === '' || $(this).val() === null) {
+          valid = false;
+        }
+      }
+    });
+
+    if (!valid) {
+      alert("All fields must be filled.");
+      return false;
+    }
+
   });
 
 });
