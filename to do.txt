@@ -1,11 +1,7 @@
 TO DO:
 
-
-fix home page so it works on maria's screen (mat)
-make the search bar wider when clicked
-contact page make "message" a text area thingy not just text
 change picture upload buttons
-CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isnt left blank and thats it (oh and check that password and confirm apssword are the same). nothing fancy (JUST JAVA SCRIPT) 
+CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isn't left blank and that's it (oh and check that password and confirm password are the same). nothing fancy (JUST JAVA SCRIPT)
 
 
 
