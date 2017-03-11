@@ -1,6 +1,5 @@
 TO DO:
 
-change picture upload buttons
 CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isn't left blank and that's it (oh and check that password and confirm password are the same). nothing fancy (JUST JAVA SCRIPT)
 
 
