@@ -448,7 +448,9 @@ legend{
   height: 200px;
 }
 
-/*Buttons styling*/
+/*Buttons styling
+Used css button generator to help make them pretty
+http://css3buttongenerator.com/*/
 .input-file-button{
   background: #dedede;
   background-image: -webkit-linear-gradient(top, #dedede, #ffffff);

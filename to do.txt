@@ -8,3 +8,4 @@ later maybe:
 click profile picture -> open bigger window
 add thumbs up icon and rating beside posts
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
+add more photos of ozzy everywhere
