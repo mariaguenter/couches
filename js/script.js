@@ -11,7 +11,7 @@ $(document).ready(function() {
     var markup = '<button class="input-file-button ' + id + '">Choose File</button>'
 
     // Hide the input upload button.
-    $(this).css({'text-indent': 9999});
+    $(this).css({'text-indent': '-9999px'});
 
     // Append our new button.
     $(this).after(markup);
