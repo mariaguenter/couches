@@ -38,6 +38,11 @@ p{
   font-size: 0.9em;
 }
 
+.centerP{
+	text-align: center;
+	font-size: 1em;
+}
+
 a{
   text-decoration:none;
   font-family: 'Playfair Display', sans-serif;
