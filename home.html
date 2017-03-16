@@ -9,6 +9,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/style.css" />
+	<link rel="icon" href="images/thumbnail.png">
   </head>
 
   <body>
@@ -92,11 +93,17 @@
           <form id="side-bar-new-post" action="">
             <div class="form-row">
               <label for="np-title" class="top">Title: </label>
-              <input id="np-title" type="text"/>
+              <input id="np-title" type="text" required/>
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content"></textarea>
+              <textarea id="np-content" required></textarea>
+            </div>
+			<div class="form-row">
+              <label for="np-category" class="top">Category: </label>
+              <input id="np-category" type="radio" name="category" value="category 1">Category 1<br>
+			  <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
+			  <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
             </div>
             <div class="form-row">
               <label for="np-image" class="top">Image: </label>

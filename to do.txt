@@ -1,11 +1,20 @@
 TO DO:
 
-CLIENT SIDE VALIDATION (MAT?? OMG I HAVE NO IDEA HOW) -just check that any input isn't left blank and that's it (oh and check that password and confirm password are the same). nothing fancy (JUST JAVA SCRIPT)
+*add thumbs up icon and rating beside posts
+*edit categories buttons so they look better
+*email scott "Navigation	breadcrumb	strategy	(i.e.	user	can	determine	where	they	are	in	threads)"
+*make include files for stuff
+***Do the database SQL stuff
 
+
+impliment database
+validation
+login/logout stuff
+admin stuff
 
 
 later maybe:
 click profile picture -> open bigger window
-add thumbs up icon and rating beside posts
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 add more photos of ozzy everywhere
+make comments collapsable?

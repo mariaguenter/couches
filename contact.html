@@ -8,6 +8,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/style.css" />
+	<link rel="icon" href="images/thumbnail.png">
   </head>
 
   <body>
@@ -30,19 +31,19 @@
           <legend>Contact Us</legend>
           <p>
             <label class="contactFields">Email:</label>
-            <input type="email" name="email" />
+            <input type="email" name="email" required/>
           </p>
           <p>
             <label class="contactFields">Name:</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" required/>
           </p>
           <p>
             <label class="contactFields">Subject:</label>
-            <input type="text" name="subject" />
+            <input type="text" name="subject" required/>
           </p>
           <p>
             <label class="contactFields">Message:</label>
-            <textarea name="message"></textarea>
+            <textarea name="message" required></textarea>
           </p>
           <input type = "submit"/>
         </form>
