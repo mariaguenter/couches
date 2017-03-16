@@ -3,7 +3,6 @@ TO DO LIST:
 read the project discription again (maria and mat. we are trying to get all the "minimum functional requirements" done)
 
 make include files for stuff (maria)
-write out dtabase sql stuff (maria)
 add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 impliment/import database witch craft (mat)
 once database up - fill it with some stuff (maria)
@@ -18,7 +17,7 @@ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
 validation on all forms! (mat?)
 post on cosc360.ok.ubc.ca (mat)
 preliminary summary document, indicating implememnted functionality (maria)
-
+contact us - make it send an email (maria will make an email account, mat actually make this work)
 
 
 Next due date:
