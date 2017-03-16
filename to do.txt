@@ -1,20 +1,33 @@
-TO DO:
+TO DO LIST:
 
-*add thumbs up icon and rating beside posts
-*edit categories buttons so they look better
-*email scott "Navigation	breadcrumb	strategy	(i.e.	user	can	determine	where	they	are	in	threads)"
-*make include files for stuff
-***Do the database SQL stuff
+read the project discription again (maria and mat. we are trying to get all the "minimum functional requirements" done)
+
+make include files for stuff (maria)
+write out dtabase sql stuff (maria)
+add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
+impliment/import database witch craft (mat)
+once database up - fill it with some stuff (maria)
+once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
+home page categories filters (maria?? maybe??)
+edit profile page -change password/change photo/change email? (maria)
+make forgot password into an email recovery thing, that also uses the security question they gave (mat)
+make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
+admin page - search users/enable or disable users/ edit/remove psots or users (mat?) lets make this a VERY ugly basic page. aka no css
+state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (mat)
+AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
+validation on all forms! (mat?)
+post on cosc360.ok.ubc.ca (mat)
+preliminary summary document, indicating implememnted functionality (maria)
 
 
-impliment database
-validation
-login/logout stuff
-admin stuff
 
-
-later maybe:
+Next due date:
 click profile picture -> open bigger window
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 add more photos of ozzy everywhere
-make comments collapsable?
+make comments collapsable
+styling flourishes??
+anything else on addition list
+summary of features implemented (maria)
+6 page report stuff (maria)
+
