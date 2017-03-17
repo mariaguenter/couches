@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <!-- @TODO: Make this an .include file DONE LIKE DINNER -->
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-    <meta charset="utf-8">
-    <title>Home</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" href="images/thumbnail.png">
-  </head>
-
+<?php
+  include ('head.php');
+?>
   <body>
-    <!-- @TODO: Make this an .include file DONE LIKE DINNER -->
-		<header id="header">
-			<a href = "home.html">
-				<img id="logo" src="images/logo.png" alt="Kitty Threads" />
-			</a>
-			<nav>
-				<ul>
-          <li><a href="home.html">home</a></li>
-          <li><a href="profile.html">profile</a></li>
-          <li><a href="login.html">log in</a></li>
-        </ul>
-      </nav>
-    </header>
+
+<?php
+  include ('header.php');
+?>
 
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
           <li><a href="#">top</a></li>
           <li><a href="#">new</a></li>
-          <li><a href="#">category 1</a></li>
-          <li><a href="#">category 2</a></li>
-          <li><a href="#">category 3</a></li>
+          <li><a href="#">health and nutrition</a></li>
+          <li><a href="#">behaviour</a></li>
+          <li><a href="#">funny stories</a></li>
         </ul>
 
       </article>
@@ -83,6 +65,7 @@
         </article>
       </div>
 
+      <!-- @TODO: Make this an .include file -->
       <article id="right-sidebar" class="col-2">
         <div class="new-post-container hidden">
 		  <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
@@ -118,15 +101,9 @@
       </article>
     </div>
 
-    <!-- @TODO: Make this an .include file DONE LIKE DINNER -->
-    <footer>
-      <div class="footer-section">
-        <p>
-          <a href="home.html">home</a>  | <a href="profile.html">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
-        </p>
-        <i><small>© 2017 Maria Guenter & Ozzy the cat</small></i>
-      </div>
-    </footer>
+<?php
+  include ('footer.php');
+?>
 
   </body>
 </html>
