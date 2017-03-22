@@ -9,8 +9,8 @@ once database up - make log in/create account/comment/submit post/home page/prof
 home page categories filters (maria?? maybe??)
 make forgot password into an email recovery thing, that also uses the security question they gave (mat)
 make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
-admin page - search users/enable or disable users/ edit/remove psots or users (mat?) lets make this a VERY ugly basic page. aka no css
-state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (mat)
+admin page - search users/enable or disable users/ edit/remove psots or users (mat?) lets make this a VERY ugly basic page. aka no css(maria)
+state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (maria thinks she can do it)
 AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
 validation on all forms! (mat?)
 post on cosc360.ok.ubc.ca (mat)
