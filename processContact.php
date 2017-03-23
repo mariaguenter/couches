@@ -7,7 +7,7 @@
   <head lang="en">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
     <meta charset="utf-8">
-    <title>Signout</title>
+    <title>Contact Us</title>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/responsive.css" />
@@ -16,17 +16,18 @@
   </head>
 
   <body>
+  
 <?php
-  unset($_SESSION['username']);
-  unset($_SESION['admin']);
-  require 'header.php';
+	require 'header.php';
 ?>
 
-<h1>you are now signed out</h1>
-
-<?php
-  include 'footer.php';
+    <h1>Thank you for your message, we will get back to you soon!</h1>
+	<p><a href = "home.php">Return to home</a></p>
+	
+<?php	
+		require 'footer.php';
 ?>
+  </body>
+</html>  
 
- </body>
-</html>
+<!--witch craft to make it send an email -->

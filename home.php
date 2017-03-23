@@ -15,7 +15,8 @@
   <body>
 
 <?php
-  include ('header.php');
+  session_start();
+  require 'header.php';
 ?>
 
     <div id="main" class="grid-row">
@@ -111,7 +112,7 @@
     </div>
 
 <?php
-  include ('footer.php');
+  require 'footer.php';
 ?>
 
   </body>

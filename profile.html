@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if(isset($_SESSION['username']) == False){
+		header("Location: login.php");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head lang="en">
@@ -12,19 +20,10 @@
   </head>
 
   <body>
-    <header id="header">
-      <a href = "home.html">
-        <img id="logo" src="images/logo.png" alt="Kitty Threads" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="home.html">home</a></li>
-          <li><a href="profile.html">profile</a></li>
-          <li><a href="login.html">log in</a></li>
-        </ul>
-      </nav>
-    </header>
-
+  
+<?php
+  require 'header.php';
+?>
     <article id="centerProfile">
       <div id="profileEntry">
         <figure>
@@ -73,14 +72,9 @@
 
     </article>
 
-    <footer>
-      <div class="footer-section">
-        <p>
-          <a href="home.html">home</a>  | <a href="#">profile</a>| <a href="#">search</a>  | <a href="login.html">login</a>  | <a href="contact.html">contact</a>
-        </p>
-        <i><small>© 2017 Maria Guenter & Ozzy the cat</small></i>
-      </div>
-    </footer>
+<?php
+  require 'footer.php';
+?>
 
   </body>
 </html>

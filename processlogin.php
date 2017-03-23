@@ -24,7 +24,8 @@
 			while ($row = $res->fetch_assoc()) {
 				$exists = true;
 				$_SESSION['username'] = $user;
-				if ($admin == 1){   //yes or no  (0 or 1)value we need to get from database
+				$admin = $row->adminPriv;
+				if ($admin == True){  
 					$_SESSION['admin'] = $admin; 
 				}
 				header('Location: home.php');

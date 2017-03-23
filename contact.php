@@ -13,12 +13,12 @@
 
   <body>
 <?php
-  include ('header.php');
+  require 'header.php';
 ?>
 
     <div id="parent">
       <div id="contactMain">
-        <form action="" method = "post" id = "contactForm">
+        <form action="processContact.php" method = "post" id = "contactForm">
           <legend>Contact Us</legend>
           <p>
             <label class="contactFields">Email:</label>
@@ -42,7 +42,7 @@
     </div>
 
 <?php
-  include ('footer.php');
+  require 'footer.php';
 ?>
 
   </body>

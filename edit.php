@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(isset($_SESSION['username']) == False){
+		header("Location: home.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
   <head lang="en">
@@ -13,7 +20,7 @@
 
   <body>
 <?php
-  include ('header.php');
+  require 'header.php';
 ?>
 <!-- No idea if this page works, havent looked at it in browser, gotta go to class now-->
 	<form action="" method = "post" id = "createAccountForm">
@@ -47,7 +54,7 @@
           <input type = "submit" value="submit"/>
         </form>
 <?php
-  include ('footer.php');
+  require 'footer.php';
 ?>
 
   </body>

@@ -1,30 +1,40 @@
 TO DO LIST:
 
-read the project discription again (maria and mat. we are trying to get all the "minimum functional requirements" done)
+GOALS: 	ALL OF DELIVERABLE 2 DONE BY FRIDAY/SATURDAY (if possible)
+		ALL OF DELIVERABLE 3 DONE BY WEDNESDAY
 
-add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
-impliment/import database witch craft (mat)
-once database up - fill it with some stuff (maria)
-once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
-home page categories filters (maria?? maybe??)
-make forgot password into an email recovery thing, that also uses the security question they gave (mat)
-make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
-admin page - search users/enable or disable users/ edit/remove psots or users (mat?) lets make this a VERY ugly basic page. aka no css(maria)
-state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (maria thinks she can do it)
-AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
-validation on all forms! (mat?)
-post on cosc360.ok.ubc.ca (mat)
-preliminary summary document, indicating implememnted functionality (maria)
-contact us - make it send an email (maria will make an email account, mat actually make this work)
+Legend:	* - Maria	^ - Mat		*^* - Both
+
+DELIVERABLE 2
+--------------
+*^* read the project discription again once scott posts new one (maria and mat)
+*^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
+^ impliment/import database witch craft (mat)
+* once database up - fill it with some stuff (maria)
+* once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
+* home page categories filters (maria?? maybe??)
+^ make forgot password into an email recovery thing, that also uses the security question they gave (mat)
+^ make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
+* admin page - search users/enable or disable users/ edit/remove psots or users, lets make this a VERY ugly basic page. aka no css(maria)
+* state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (maria thinks she can do it)
+^ validation on all forms! (mat?)
+^ post on cosc360.ok.ubc.ca (mat)
+* preliminary summary document, indicating implememnted functionality (maria)
+*^* processContact.php - make it send an email (maria will make an email account, mat actually make this work)
+^ mae the category labels line up with the buttons nicely (I tried and gave up)
+* ask scott what "Navigation	breadcrumb	strategy	(i.e.	user	can	determine	where	they	are	in	threads)" means
+* php at top of "need to be loggin in sites" to redirect 
+*^* make processCreateAccount.php (I think I can do most of it but I dont now how to do the image part)
 
 
-Next due date:
-click profile picture -> open bigger window
+DELIVERABLE 3
+--------------
+^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
+click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
-add more photos of ozzy everywhere
-make comments collapsable
-styling flourishes??
-anything else on addition list
-summary of features implemented (maria)
-6 page report stuff (maria)
+make comments collapsable?
+styling flourishes?? (pop up that asks "are you sure?" when deleting user/post)
+anything else on addition list (maybe try to do one thing from the list)
+* summary of features implemented (maria)
+* 6 page report stuff (maria)
 

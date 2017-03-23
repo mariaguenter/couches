@@ -1,6 +1,5 @@
 <?php
 //code to change if loggin in or not
-
 	session_start();
 	if(isset($_SESSION['username'])){
 ?>
