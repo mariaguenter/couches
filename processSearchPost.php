@@ -25,29 +25,33 @@
 
 	require 'connection.php';
 		$exists = false;
-		$user = "Not Found";
-		$fname = "Not Found";
-		$lname = "Not Found";
-		$email = "Not Found";
-		$adminPriv = "Not Found";
+		$postid = "Not Found";
+		$postDate = "Not Found";
+		$author = "Not Found";
+		$category = "Not Found";
+		$rating = "Not Found";
 		$count = 0;
+		$content  "Not Found";
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if (isset($_POST['username'])) {
-				$user = $_POST['username'];
+				$title = $_POST['postTitle'];
 
 				
-				if($stat = $connection->prepare("select username, fname, lname, email, adminPriv, count(postid) as numPosts from user, post where username=? and user.username = post.author group by username, fname, lname, email, adminPriv")){ 
-				$stat->bind_param("s", $user);
+				if($stat = $connection->prepare("select post.postid, postDate, post.author, category, rating, title, post.content, count(comid) as numCom from post, comments where title like ? and post.postid = comments.postid group by post.postid, postDate, post.author, category, rating, title, post.content")){ 
+				$title2 = "%".$title."%"; //NO IDEA IF THIS WORKS LOLOLOLOL
+				$stat->bind_param("s", $title2);
 				$stat->execute();
 				$res = $stat->get_result();
 				
 			
 				while ($row = $res->fetch_object()) {
-					$fname = $row->fname;
-					$lname = $row->lname;
-					$email = $row->email;
-					$adminPriv = $row->adminPriv;
-					$count = $row->numPosts;
+					$postid = $row->postid;
+					$postDate = $row->postDate;
+					$author = $row->author;
+					$category = $row->category;
+					$rating = $row->rating;
+					$count = $row->numCom;
+					$content  $row->content;					
 					break;
 				}
 				$stat->close();
@@ -62,21 +66,33 @@
 		
 		echo "
 		<fieldset>
-			<legend>User: $user </legend>
-			First Name: $fname <br>
-			Last Name: $lname <br>
-			Email: $email <br>
-			adminPriv: $adminPriv
+			<legend>Title: $title </legend>
+			Post ID: $postid <br>
+			Post Date: $postDate <br>
+			Author: $author <br>
+			Content: $content <br>
+			Category: $category <br>
+			Rating: $rating <br>
+			Number of Comments: $numCom <br>
 		</fieldset>";
 		
 		//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
-		
-		echo"
-		</body>
-		</html>";
 
+		if($exists == True){
+		?>	
 
+			<form method = "post" action = "deletePost.php" id="deltePost" >
+				<input type = "submit" value = "Delete Post" > 
+			</form>
+			
 
+			
+<?php
+			}
+		}
   require 'footer.php';
 ?>
+
+		</body>
+		</html>
 

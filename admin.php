@@ -34,7 +34,7 @@
 <br><br><br>
 <form method="post" action="processSearchPost.php" id="mainForm" >
   Search Post (by title):<br> <!--will display all info from the table and also have delete button-->
-  <input type="text" name="username" id="username" class="required">
+  <input type="text" name="postTitle" id="postTitle" class="required">
   <br><br>
   <input type="submit" value="Find Post">
 </form>
