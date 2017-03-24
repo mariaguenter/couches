@@ -77,7 +77,7 @@
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content" required></textarea>
+              <textarea id="np-content" placeholder="max 800 characters" required></textarea>
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>

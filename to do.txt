@@ -7,33 +7,59 @@ Legend:	* - Maria	^ - Mat		*^* - Both
 
 DELIVERABLE 2
 --------------
-*^* read the project discription again once scott posts new one (maria and mat)
+
 ^ impliment/import database witch craft (mat)
 * once database up - fill it with some stuff (maria)
 * once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
 ^ home page categories filters chagne the content of the home page(mat)
 ^ make forgot password into an email recovery thing, that also uses the security question they gave (mat)
 ^ make the search bar actually search stuff (mat)
-^ validation on all forms! (mat?)
+^ validation on all forms! (mat) 
+	EVERYTING
+		-no sketchy sql injections
+	Create Account
+		-reg exp for passwords: 7-15 characters, atleast one number
+		-password and confirm password the same
+		-username unique (and max 30 characters)
+		-first name, last name, securtiy answer all less than 30 charcters
+		-email less than 50, includes @ and .
+		-profile picture is actually an image
+	Log in
+		-password and username are actually a thing
+	Edit Profile
+		-picture actualy image
+		-email has @ . and max 50
+		-password as usual
+	Make Post	
+		-Title has max 30 characters
+		-content max 800 characters
+	Comment
+		-max 500 chars
+	Search bar
+		-no sketchy sql injections
+		-take out ' n stuff you know the drill
+	Contact us
+		-email . @ max 50
+		-idk what else
 ^ post on cosc360.ok.ubc.ca (mat)
 * preliminary summary document, indicating implememnted functionality (maria)
-*^* processContact.php - make it send an email (maria will make an email account, mat actually make this work)
-^ mae the category labels line up with the buttons nicely (I tried and gave up)
+^ processContact.php - make it send an email (kitty.threads.contact@gmail.com passpass)
+^ make the category labels line up with the buttons nicely (I tried and gave up)
 * ask scott what "Navigation	breadcrumb	strategy	(i.e.	user	can	determine	where	they	are	in	threads)" means
 *^* make processCreateAccount.php (I think I can do most of it but I dont now how to do the image part)
 * make processPost.php (I think I can do most of it but I dont now how to do the image part)
 ^ finish Post page (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff)
 ^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
-* processSearchPost page
+^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
 * make deleteUser.php
 * make enableUser.php
 * make disableUser.pp
-* make deletePost.php
 ^ forgot my password link (idk how this will work with the email recovery witch craft)
 * make porcessLogin.php
 * make newUser.php
 * make newComment.php
 * make newPosts.php
+
 
 
 DELIVERABLE 3
@@ -46,6 +72,7 @@ make comments collapsable?
 make footer go to bottom when small page
 styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar)
 anything else on addition list (maybe try to do one thing from the list)
+? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
 
