@@ -33,7 +33,7 @@ DELIVERABLE 3
 click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 make comments collapsable?
-styling flourishes?? (pop up that asks "are you sure?" when deleting user/post)
+styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar)
 anything else on addition list (maybe try to do one thing from the list)
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
