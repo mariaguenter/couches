@@ -13,7 +13,7 @@ DELIVERABLE 2
 * once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
 ^ home page categories filters chagne the content of the home page(mat)
 ^ make forgot password into an email recovery thing, that also uses the security question they gave (mat)
-^ make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
+^ make the search bar actually search stuff (mat)
 ^ validation on all forms! (mat?)
 ^ post on cosc360.ok.ubc.ca (mat)
 * preliminary summary document, indicating implememnted functionality (maria)
