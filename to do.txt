@@ -54,7 +54,6 @@ DELIVERABLE 2
 * make deleteUser.php
 * make enableUser.php
 * make disableUser.pp
-* make deletePost.php
 ^ forgot my password link (idk how this will work with the email recovery witch craft)
 * make porcessLogin.php
 * make newUser.php

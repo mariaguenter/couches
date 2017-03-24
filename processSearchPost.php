@@ -44,15 +44,40 @@
 				$res = $stat->get_result();
 				
 			
-				while ($row = $res->fetch_object()) {
+				while ($row = $res->fetch_object()) { //prints out all posts that the search returns lolol this may be a bad idea
+					$exists = True;
 					$postid = $row->postid;
 					$postDate = $row->postDate;
 					$author = $row->author;
 					$category = $row->category;
 					$rating = $row->rating;
 					$count = $row->numCom;
-					$content  $row->content;					
-					break;
+					$content  $row->content;	
+					//code on how to get the image (MAT??)					
+					echo "
+					<br>
+					<fieldset>
+						<legend>Title: $title </legend>
+						Post ID: $postid <br>
+						Post Date: $postDate <br>
+						Author: $author <br>
+						Content: $content <br>
+						Category: $category <br>
+						Rating: $rating <br>
+						Number of Comments: $numCom <br>
+					</fieldset>";
+					
+					//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
+			
+					$GLOBALS['postid'] = $postid;
+					?>	
+					<form method = "post" action = "deletePost.php" id="deltePost" >
+						<input type = "submit" value = "Delete Post" > 
+					</form>
+						
+
+				<?php		
+					
 				}
 				$stat->close();
 				}
@@ -61,33 +86,6 @@
 
 				$connection->close();
 
-			}
-		}
-		
-		echo "
-		<fieldset>
-			<legend>Title: $title </legend>
-			Post ID: $postid <br>
-			Post Date: $postDate <br>
-			Author: $author <br>
-			Content: $content <br>
-			Category: $category <br>
-			Rating: $rating <br>
-			Number of Comments: $numCom <br>
-		</fieldset>";
-		
-		//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
-
-		if($exists == True){
-		?>	
-
-			<form method = "post" action = "deletePost.php" id="deltePost" >
-				<input type = "submit" value = "Delete Post" > 
-			</form>
-			
-
-			
-<?php
 			}
 		}
   require 'footer.php';
