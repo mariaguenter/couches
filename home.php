@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
- 
+<html> 
     <head lang="en">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
     <meta charset="utf-8">
@@ -15,7 +14,7 @@
   <body>
 
 <?php
-  session_start();
+	session_start();
   require 'header.php';
 ?>
 
@@ -75,12 +74,13 @@
         </article>
       </div>
 
-      <!-- @TODO: Make this an .include file -->
+
       <article id="right-sidebar" class="col-2">
         <div class="new-post-container hidden">
-		  <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
-		  <p class="centerP"> OR (if they are logged in) </p>
           <p class="centerP">Write new post</p>
+		<?php
+			if(isset($_SESSION['username'])){
+		?>	
           <form id="side-bar-new-post" action="">
             <div class="form-row">
               <label for="np-title" class="top">Title: </label>
@@ -107,11 +107,14 @@
         <div class="side-bar-login-form">
 
         </div>
+		<?php } else { ?>
+		<p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
 		<img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
       </article>
     </div>
 
 <?php
+  }
   require 'footer.php';
 ?>
 

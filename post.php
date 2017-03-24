@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html>
-  <head lang="en">
+<html> 
+    <head lang="en">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
     <meta charset="utf-8">
-    <title>Signout</title>
+    <title>View Post</title>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/responsive.css" />
@@ -13,18 +12,35 @@
   </head>
 
   <body>
+
 <?php
 	session_start();
-  unset($_SESSION['username']);
-  unset($_SESION['admin']);
   require 'header.php';
 ?>
 
-<h1>you are now signed out</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
-  include 'footer.php';
+  }
+  require 'footer.php';
 ?>
 
- </body>
+  </body>
 </html>

@@ -1,11 +1,10 @@
 <?php
 //Code to change which to use depending on if logged in or not and if admin or not
-	session_start();
 	if(isset($_SESSION['username']) == False){ ?>
  
  <!--Not logged in -->
 		<header id="header">
-			<a href = "home.html">
+			<a href = "home.php">
 				<img id="logo" src="images/logo.png" alt="Kitty Threads" />
 			</a>
 			<nav>

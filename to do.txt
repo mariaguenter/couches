@@ -8,33 +8,45 @@ Legend:	* - Maria	^ - Mat		*^* - Both
 DELIVERABLE 2
 --------------
 *^* read the project discription again once scott posts new one (maria and mat)
-*^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 ^ impliment/import database witch craft (mat)
 * once database up - fill it with some stuff (maria)
 * once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
-* home page categories filters (maria?? maybe??)
+^ home page categories filters chagne the content of the home page(mat)
 ^ make forgot password into an email recovery thing, that also uses the security question they gave (mat)
 ^ make the search bar actually search stuff (mat impliment, maria could potentially write the sql for it...)
-* admin page - search users/enable or disable users/ edit/remove psots or users, lets make this a VERY ugly basic page. aka no css(maria)
-* state! aka if logged in the "login button" becomes "sign out" and the profile actually works and the sumbit post thing changes (maria thinks she can do it)
 ^ validation on all forms! (mat?)
 ^ post on cosc360.ok.ubc.ca (mat)
 * preliminary summary document, indicating implememnted functionality (maria)
 *^* processContact.php - make it send an email (maria will make an email account, mat actually make this work)
 ^ mae the category labels line up with the buttons nicely (I tried and gave up)
 * ask scott what "Navigation	breadcrumb	strategy	(i.e.	user	can	determine	where	they	are	in	threads)" means
-* php at top of "need to be loggin in sites" to redirect 
 *^* make processCreateAccount.php (I think I can do most of it but I dont now how to do the image part)
+* make processPost.php (I think I can do most of it but I dont now how to do the image part)
+^ finish Post page (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff)
+^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
+* processSearchPost page
+* make deleteUser.php
+* make enableUser.php
+* make disableUser.pp
+* make deletePost.php
+^ forgot my password link (idk how this will work with the email recovery witch craft)
+* make porcessLogin.php
+* make newUser.php
+* make newComment.php
+* make newPosts.php
 
 
 DELIVERABLE 3
 --------------
 ^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
+*^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 make comments collapsable?
+make footer go to bottom when small page
 styling flourishes?? (pop up that asks "are you sure?" when deleting user/post)
 anything else on addition list (maybe try to do one thing from the list)
+^ make 404 page!
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
 

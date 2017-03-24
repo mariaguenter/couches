@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION['admin'] == False || isset($_SESSION['admin']) == False){
-		header("Location: home.html");
+		header("Location: home.php");
 	}
 ?>
 
@@ -24,7 +24,22 @@
   require 'header.php';
 ?>
 
-<h1>search users/enable or disable users/ edit/remove psots or users - marai will finish this later lololol</h1>
+<!--search users/enable or disable users/ edit/remove psots or users-->
+<form method="post" action="processSearchUser.php" id="mainForm" >
+  Search User:<br> <!--will display all users information from the table like lab9 then have enable/disable/delete buttons-->
+  <input type="text" name="username" id="username" class="required">
+  <br><br>
+  <input type="submit" value="Find User">
+</form>
+<br><br><br>
+<form method="post" action="processSearchPost.php" id="mainForm" >
+  Search Post (by title):<br> <!--will display all info from the table and also have delete button-->
+  <input type="text" name="username" id="username" class="required">
+  <br><br>
+  <input type="submit" value="Find Post">
+</form>
+
+</div>
 
 <?php
   require 'footer.php';
