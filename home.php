@@ -1,23 +1,13 @@
+<?php $title = "Home"; ?>
+
 <!DOCTYPE html>
 <html>
- 
-    <head lang="en">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-    <meta charset="utf-8">
-    <title>Home</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" href="images/thumbnail.png">
-  </head>
+
+  <?php require 'inc/head.inc.php'; ?>
 
   <body>
 
-<?php
-  session_start();
-  require 'header.php';
-?>
+    <?php require 'inc/header.inc.php'; ?>
 
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
@@ -78,8 +68,8 @@
       <!-- @TODO: Make this an .include file -->
       <article id="right-sidebar" class="col-2">
         <div class="new-post-container hidden">
-		  <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
-		  <p class="centerP"> OR (if they are logged in) </p>
+          <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
+          <p class="centerP"> OR (if they are logged in) </p>
           <p class="centerP">Write new post</p>
           <form id="side-bar-new-post" action="">
             <div class="form-row">
@@ -90,11 +80,11 @@
               <label for="np-content" class="top">Content: </label>
               <textarea id="np-content" required></textarea>
             </div>
-			<div class="form-row">
+            <div class="form-row">
               <label for="np-category" class="top">Category: </label>
               <input id="np-category" type="radio" name="category" value="category 1">Category 1<br>
-			  <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
-			  <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
+              <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
+              <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
             </div>
             <div class="form-row">
               <label for="np-image" class="top">Image: </label>
@@ -107,13 +97,11 @@
         <div class="side-bar-login-form">
 
         </div>
-		<img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
+        <img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
       </article>
     </div>
 
-<?php
-  require 'footer.php';
-?>
+    <?php require 'inc/footer.inc.php'; ?>
 
   </body>
 </html>
