@@ -1,27 +1,18 @@
 <?php
-	session_start();
-	if(isset($_SESSION['username']) == False){
-		header("Location: login.php");
-	}
+  $title = "Profile";
+
+  if (empty($_SESSION['username'])) {
+    header("Location: login.php");
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-    <meta charset="utf-8">
-    <title>Profile</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" href="images/thumbnail.png">
-  </head>
+  <?php require 'inc/head.inc.php'; ?>
+
   <body>
 
-<?php
-  include ('header.php');
-?>
+    <?php require 'inc/header.inc.php'; ?>
     <article id="centerProfile">
       <div id="profileEntry">
         <figure>
@@ -69,10 +60,8 @@
       </div>
 
     </article>
-	
-<?php
-  include ('footer.php');
-?>
+
+    <?php include ('inc/footer.inc.php'); ?>
 
   </body>
 </html>
