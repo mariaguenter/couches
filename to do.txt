@@ -70,7 +70,7 @@ click profile picture -> open bigger window (i have no idea, but  I guess I coul
 make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 make comments collapsable?
 make footer go to bottom when small page
-styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar)
+styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; javascript buttons)
 anything else on addition list (maybe try to do one thing from the list)
 ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
 * summary of features implemented (maria)
