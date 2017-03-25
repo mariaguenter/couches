@@ -31,6 +31,7 @@
 		$email = "Not Found";
 		$adminPriv = "Not Found";
 		$count = 0;
+		$GLOBALS['user'] = $user;
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if (isset($_POST['username'])) {
 				$user = $_POST['username'];

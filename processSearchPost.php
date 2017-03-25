@@ -55,7 +55,6 @@
 					$content  $row->content;	
 					//code on how to get the image (MAT??)					
 					echo "
-					<br>
 					<fieldset>
 						<legend>Title: $title </legend>
 						Post ID: $postid <br>
@@ -65,7 +64,8 @@
 						Category: $category <br>
 						Rating: $rating <br>
 						Number of Comments: $numCom <br>
-					</fieldset>";
+					</fieldset>
+					<br>";
 					
 					//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
 			
@@ -82,7 +82,7 @@
 				$stat->close();
 				}
 
-				//code on how to get the image (MAT??)
+			
 
 				$connection->close();
 

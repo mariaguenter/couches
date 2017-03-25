@@ -51,13 +51,9 @@ DELIVERABLE 2
 ^ finish Post page (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff)
 ^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
 ^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
-* make deleteUser.php
-* make enableUser.php
-* make disableUser.pp
 ^ forgot my password link (idk how this will work with the email recovery witch craft)
-* make porcessLogin.php
 * make newUser.php
-* make newComment.php
+* make newComment.php 
 * make newPosts.php
 
 
