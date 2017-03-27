@@ -30,15 +30,15 @@
         </p>
         <br/>
 
-        <form action="" method = "post" id = "createAccountForm">
+        <form action="newUser.php" method = "post" id = "createAccountForm">
           <legend>create an account</legend>
           <p>
             <label class = "contactFields">first name</label>
-            <input type="text" name="fname" required />
+            <input type="text" name="firstname" required />
           </p>
           <p>
             <label class = "contactFields">last name</label>
-            <input type="text" name="lname" required/>
+            <input type="text" name="lastname" required/>
           </p>
           <p>
             <label class = "contactFields">email:</label>

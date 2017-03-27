@@ -19,6 +19,14 @@
 ?>
 
 
+<!-- display post picture, 
+author,
+date,
+content,
+comments,
+add a comment 
+
+I have no idea how to get this from teh database based on the previous page ya know -->
 
 
 

@@ -51,11 +51,11 @@ DELIVERABLE 2
 ^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
 ^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
 ^ forgot my password link (idk how this will work with the email recovery witch craft)
-^ edit newUser.php to store the photo they upload
+* make newUser.php
 * make newComment.php 
 * make newPost.php
 * make three process edit pages
-
+* make "user already exits" page
 
 
 
