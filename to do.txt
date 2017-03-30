@@ -7,8 +7,6 @@ Legend:	* - Maria	^ - Mat		*^* - Both
 
 DELIVERABLE 2
 --------------
-
-^ impliment/import database witch craft (mat)
 ^ home page categories filters chagne the content of the home page(mat)
 ^ make the search bar actually search stuff (mat)
 ^ validation on all forms! (mat) 
