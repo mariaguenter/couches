@@ -1,27 +1,16 @@
 <?php
-	session_start();
-	if($_SESSION['admin'] == False || isset($_SESSION['admin']) == False){
-		header("Location: home.php");
-	}
+  $title = "Search User";
+  if (empty($_SESSION['admin'])) {
+    header("Location: home.php");
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-    <meta charset="utf-8">
-    <title>Admin Controls</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" href="images/thumbnail.png">
-  </head>
+  <?php require 'inc/head.inc.php'; ?>
 
   <body>
-<?php
-
-  require 'header.php';
+    <?php require 'inc/header.inc.php'; 
 
 	require 'connection.php';
 		$exists = false;
@@ -51,6 +40,7 @@
 					$adminPriv = $row->adminPriv;
 					$count = $row->numPosts;
 					break;
+				
 				}
 				$stat->close();
 				}
@@ -92,6 +82,9 @@
 			
 			
 <?php
+			}else{
+				echo"<h1>no results</h1>";
+				echo"<p><a href =\"admin.php\">return</a></p>";
 			}
 		}
   require 'footer.php';

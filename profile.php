@@ -4,8 +4,7 @@
   if (empty($_SESSION['username'])) {
     header("Location: login.php");
   }
-?
->
+?>
 
 <!DOCTYPE html>
 <html>

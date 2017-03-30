@@ -17,7 +17,7 @@
 	session_start();
   require 'header.php';
   
-  //need to dispaly navigation along the top
+  
   $category = database stuff;
   $tite  database stuff;
   $author = database stuff;
@@ -30,13 +30,14 @@
 	  $comments[] = row->comid;
 	  $count = $count + 1;
   }
+  //need to dispaly navigation along the top
   echo'<h5><a href = "home.php">Home</a> -> <a href = "#">$category</a> -> $title</h5>'; //make h5 really small
 
 
 
 // display post picture, author,date,content,comments,add a comment 
 
-//I have no idea how to get this from the database based on the previous page ya know -->
+//I have no idea how to get this from the database based on the previous page ya know 
 echo"
 	<body>
           <div class=\"entry\">

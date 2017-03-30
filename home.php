@@ -70,18 +70,18 @@
         <div class="new-post-container hidden">
           <p class="centerP">Write new post</p>
 		      <?php if (isset($_SESSION['username'])) { ?>
-          <form id="side-bar-new-post" action="">
+          <form id="side-bar-new-post" action="newPost.php">
             <div class="form-row">
               <label for="np-title" class="top">Title: </label>
-              <input id="np-title" type="text" required/>
+              <input id="np-title" type="text" maxlength = "30" required/>
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content" placeholder="max 800 characters" required></textarea>
+              <textarea id="np-content" placeholder="max 800 characters" maxlength = "900"  required></textarea>
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>
-              <input id="np-category" type="radio" name="category" value="category 1">Category 1<br>
+              <input id="np-category" type="radio" name="category" value="category 1" required>Category 1<br>
               <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
               <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
             </div>

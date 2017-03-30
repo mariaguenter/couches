@@ -33,14 +33,14 @@
       }
 
       if (!$exists) {
-        header('Location: login.php');
+        header('Location: badLogin.php');
       }
     } else {
-      //header('Location: login.php'); ???
+      header('Location: login.php'); ???
     }
 
     $connection->close();
 
   } else {
-      //header('Location: login.php'); ???
+      header('Location: login.php'); ???
   }
