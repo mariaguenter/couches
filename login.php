@@ -26,7 +26,7 @@
         </form>
 
         <p id="forgot">
-          <a href="#">forgot your password?</a>
+          <a href="emailRecovery1.php">forgot your password?</a>
         </p>
         <br/>
 
