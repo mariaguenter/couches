@@ -1,3 +1,9 @@
+CREATE TABLE sqlCommands (
+  id INT NOT NULL AUTO_INCREMENT,
+  command VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
 create table user (
 	username varchar(30) not null,
 	fname varchar(30),
@@ -8,12 +14,12 @@ create table user (
 	ans varchar(30), /* answer to their question */
 	profilePic varchar(30), 
 	adminPriv boolean default FALSE, /* true or false if admin user */
-	primary key (username),
+	primary key (username)
 );
 
 create table post (
 	postid int not null AUTO_INCREMENT,
-	postDate date default GETDATE(), /* idk if this works, saw it on the internet */
+	postDate TIMESTAMP default CURRENT_TIMESTAMP, /* idk if this works, saw it on the internet */
 	author varchar(30),
 	pic varchar(30),
 	category int, /* this will just store 1, 2 or 3 for what category */
