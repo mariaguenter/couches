@@ -2,30 +2,45 @@ THINGS TO FILL DATABASE WITH
 
 3 users:
 
+captain
+Mr
+Boss
+bossman@gmail.com
+admin123
+If you could name your cat after a celebrity, who would it be?
+Ozzy Osbourne
+/images/admin.jpg
+TRUE
+
 ilovecats
 Barb
 Neuman
 cats@gmail.com
-pass
+pass123
 What is the breed of your current cat?
 Tabby
 /images/ozzy3.jpg	
+FALSE
 
 crazycatlady123
 Old
 Lady
 catlady@gmail.com
+pass123
 What is the breed of your current cat?
 Tabby
 /images/ozzy4.jpg
+FALSE
 
 kitties555
 Sally
 Joe
 kitty@gmail.com
+pass123
 What is the breed of your current cat?
 Tabby
 /images/ozzy5.jpg
+FALSE
 
 
 5 posts:

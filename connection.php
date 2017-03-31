@@ -1,6 +1,6 @@
 <?php   
 
-  $host = "localhost";
+  $host = "cosc360.ok.ubc.ca";
   $database = "couches";
   $user = "root";
   $password = "cats";
