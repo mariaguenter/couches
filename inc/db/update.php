@@ -2,7 +2,7 @@
 
 // We don't won't to allow just anybody to have access to this page.  So we set
 // a manual flag for access, or check to see if the accessor is an admin.
-$update_access = FALSE;
+$update_access = TRUE;
 
 if (empty($_SESSION)) {
   session_start();
@@ -39,7 +39,7 @@ if ($result = $connection->query($command)) {
 $count = 0;
 $queries = sizeof($sql_query);
 foreach ($sql_query as $query) {
-  $query_hash = md5($query);
+  $query_hash = md5(trim($query));
 
   // If this command has been executed before, skip it.
   if (in_array($query_hash, $executed)) {
