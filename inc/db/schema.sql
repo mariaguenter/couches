@@ -19,7 +19,7 @@ create table user (
 
 create table post (
 	postid int not null AUTO_INCREMENT,
-	postDate TIMESTAMP default CURRENT_TIMESTAMP, /* idk if this works, saw it on the internet */
+	postDate TIMESTAMP default CURRENT_TIMESTAMP, 
 	author varchar(30),
 	pic varchar(30),
 	category int, /* this will just store 1, 2 or 3 for what category */

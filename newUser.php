@@ -132,7 +132,7 @@
 			
 			
 			$connection->close();
-			header('Location: profile.php');
+			header('Location: profile.php'); //change
 		
 		}
 	}

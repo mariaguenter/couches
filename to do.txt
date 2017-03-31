@@ -1,13 +1,15 @@
 TO DO LIST:
 
-GOALS: 	ALL OF DELIVERABLE 2 DONE BY FRIDAY/SATURDAY (if possible)
-		ALL OF DELIVERABLE 3 DONE BY WEDNESDAY
+GOALS: 	ALL OF DELIVERABLE 2 DONE BY FRIDAY at midnight!!!! 
+		ALL OF DELIVERABLE 3 DONE BY WEDNESDAY april 5!!!!!
 
 Legend:	* - Maria	^ - Mat		*^* - Both
 
+Delete them as you finish
+
 DELIVERABLE 2
 --------------
-*^ home page categories filters chanee the content of the home page (I will try but it sounds scary)
+^ home page categories filters chanee the content of the home page
 ^ make the search bar actually search stuff and display results (mat)
 ^ validation on all forms! make things turn red and alert user if something is bad(mat) 
 	Create Account
@@ -31,23 +33,22 @@ DELIVERABLE 2
 		-email . @ 
 	
 ^ post on cosc360.ok.ubc.ca (mat)
-^ (not super importnat) make the category labels line up with the buttons nicely (I tried and gave up)
+^ (not super importnat aka DO NOT DO UNLESS FREE TIME) make the category labels line up with the buttons nicely (I tried and gave up)
 ^ finish post.php (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff. also once in the post.php page i have no idea how to write the query for it)
 ^ edit newUser.php to store the photo they upload
-^ edit newPost.php to store the photo they upload
+^ edit newPost.php to store the photo they upload. also make link at the end take you to the post page but idk what the link would be for that
 ^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
 ^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
-^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database
+^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database. also edit so that it redirects you to the post page for that post
 ^ edit processChangePic.php to update picture
-^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users)
-^ edit processSearchost.php 
+^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users' profiles)
 ^ edit profile.php to dispaly photos (get them from database)
 ^ edit home.php to display photos (get them from the database) 
 ^ edit home.php to link authors names and post titles
 
 	
 
-
+* take out comments on files before handing in lol
 * preliminary summary document, indicating implememnted functionality (maria) ?
 
 
@@ -63,12 +64,13 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 ^ processContact.php - make it send an email (kitty.threads.contact@gmail.com passpass)
 ^ finish forgot my password link (idk how this will work with the email recovery witch craft)
 * ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
+
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
 * 404 page change text
 * "are you sure" admin stuff
 * super easy admin reports
-* profile dispaly comments as well
+* profile dispaly comments as well?
 
 
 

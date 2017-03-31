@@ -1,7 +1,7 @@
 <?php
   $title = "Search Posts";
   if (empty($_SESSION['admin'])) {
-    header("Location: home.php");
+    header("Location: home.php"); //change
   }
 ?>
 
@@ -54,9 +54,10 @@
 						Rating: $rating <br>
 						Number of Comments: $numCom <br>
 					</fieldset>
-					<br><br>";
+					";
 					
 					//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
+					echo "<br><br>";
 			
 					$GLOBALS['postid'] = $postid;
 					?>	
@@ -81,7 +82,7 @@
 
 			}
 		}
-  require 'footer.php';
+  include ('inc/footer.inc.php');
 ?>
 
 		</body>

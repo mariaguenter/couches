@@ -1,4 +1,4 @@
-<?php   //Stolen from lab 9 -- need to change it
+<?php   
 
   $host = "localhost";
   $database = "couches";

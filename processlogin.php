@@ -1,4 +1,4 @@
-<!-- stolen from lab 9 need to modify potentially -->
+
 
 <?php
   if (isset($_SESSSION['username'])) {
@@ -25,7 +25,7 @@
           if ($admin == TRUE){
             $_SESSION['admin'] = $admin;
           }
-          header('Location: home.php');
+          header('Location: home.php'); //change
 
           break;
         }
@@ -33,14 +33,14 @@
       }
 		
       if (!$exists) {
-        header('Location: badLogin.php');
+        header('Location: badLogin.php'); //change
       }
     } else {
-      header('Location: login.php');
+      header('Location: login.php'); //change
     }
 
     $connection->close();
 
   } else {
-      header('Location: login.php'); 
+      header('Location: login.php');  //change
   }

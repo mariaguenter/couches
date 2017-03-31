@@ -1,7 +1,7 @@
 <?php
   $title = "Search User";
   if (empty($_SESSION['admin'])) {
-    header("Location: home.php");
+    header("Location: home.php"); //change
   }
 ?>
 
@@ -87,7 +87,7 @@
 				echo"<p><a href =\"admin.php\">return</a></p>";
 			}
 		}
-  require 'footer.php';
+  include ('inc/footer.inc.php');;
 ?>
 
 		</body>

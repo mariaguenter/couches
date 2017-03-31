@@ -30,10 +30,10 @@
 							$stat->execute();	
 						}
 					}else{
-						header("Location: noMatch.php");
+						header("Location: noMatch.php"); //change
 					}	
 				}else{
-					header("Location: badPass.php");
+					header("Location: badPass.php"); //change
 				}
 			
 				$stat->close();
@@ -47,4 +47,4 @@
 	}	
 	
 	
-	header("Location: profile.php");
+	header("Location: profile.php"); //change

@@ -9,7 +9,7 @@
 
     <?php include ('inc/header.inc.php'); 
 	  if (isset($_SESSSION['username'])) {
-		header('Location: home.php');
+		header('Location: home.php'); //change
 	  }
 
 	   echo"<h1>password and confirm password dont match</h1>";
