@@ -10,7 +10,7 @@ Delete them as you finish
 DELIVERABLE 2
 --------------
 ^ home page categories filters chanee the content of the home page
-^ make the search bar actually search stuff and display results (mat)
+^ make the search bar actually search stuff and display results (by post title)
 ^ validation on all forms! make things turn red and alert user if something is bad(mat) 
 	Create Account
 		-reg exp for passwords: 7-15 characters, atleast one number
@@ -49,7 +49,7 @@ DELIVERABLE 2
 	
 
 * take out comments on files before handing in lol
-* preliminary summary document, indicating implememnted functionality (maria) ?
+* preliminary summary document, indicating implememnted functionality (maria) 
 
 
 
@@ -64,6 +64,7 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 ^ processContact.php - make it send an email (kitty.threads.contact@gmail.com passpass)
 ^ finish forgot my password link (idk how this will work with the email recovery witch craft)
 * ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
+* admin search by email
 
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
