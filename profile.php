@@ -30,7 +30,7 @@
 				<article id=\"centerProfile\">
 				  <div id=\"profileEntry\">
 					<figure>
-					  <img src=\"images/blank.jpg\" alt=\"profile picture\" /><!-- MAGIC INSERTED HERE also eventually make open in pop up-->
+					  <img src=\"images/blank.jpg\" alt=\"profile picture\" />
 					</figure>
 					<div>
 					  <h3>" . $fname . " " . $lname . "</h3>

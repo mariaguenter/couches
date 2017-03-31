@@ -54,7 +54,7 @@ echo"
           </div>"
 		  
 		  //add code to display the content of the post, doesnt have to look good yolo
-		  //show all comments on the post, and add comment box (that will use newComment.php)
+		  //show all comments on the post, and add comment box (that will use newComment.php) ONLY IF THEY ARE LOGGED IN
 
 
 
