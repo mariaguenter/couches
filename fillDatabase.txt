@@ -1,0 +1,62 @@
+THINGS TO FILL DATABASE WITH 
+
+3 users:
+
+ilovecats
+Barb
+Neuman
+cats@gmail.com
+pass
+What is the breed of your current cat?
+Tabby
+/images/ozzy3.jpg	
+
+crazycatlady123
+Old
+Lady
+catlady@gmail.com
+What is the breed of your current cat?
+Tabby
+/images/ozzy4.jpg
+
+kitties555
+Sally
+Joe
+kitty@gmail.com
+What is the breed of your current cat?
+Tabby
+/images/ozzy5.jpg
+
+
+5 posts:
+
+ilovecats
+/images/ozzy7.jpg
+1
+"Lots of Excercise"
+"My cat has been going outside for like 9 hours a day to run around. I bet he's way more fit and athletic than your cat."
+
+
+ilovecats
+/images/ozzy6.jpg
+2
+"Drinking Problems"
+"My cat won't drink from his dish, he will only drink from the tap when it is running. Anyone know how I can stop this?"
+
+ilovecats
+/images/ozzy8.jpg
+3
+"Kitty Loves Christmas"
+"I put a bow on him. lol it was funny, he left it there all day and even posed for a picture."
+
+crazycatlady123
+/images/ozzy9.jpg
+3
+"Winking Kitty"
+"idk this isnt really a funny story he was just sleeping and looked cute."
+
+kitties555
+/images/ozzy10.jpg
+3
+"Freckles"
+"Insert funny story about how great my cat is."

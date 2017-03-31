@@ -7,13 +7,15 @@
 
   <body>
 
-    <?php require 'inc/header.inc.php'; ?>
+    <?php require 'inc/header.inc.php'; 
+		require 'connection.php';
+	?>
 
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
-          <li><a href="#">top</a></li>
-          <li><a href="#">new</a></li>
+          <li><a href="#">top</a></li> <!-- change what is displayed, chagne the query i guess? I have no clue -->
+          <li><a href="#">new</a></li> <!-- this is the default -->
           <li><a href="#">health and nutrition</a></li>
           <li><a href="#">behaviour</a></li>
           <li><a href="#">funny stories</a></li>
@@ -30,38 +32,32 @@
         </div>
 
         <article id="center">
-          <div class="entry"><!-- eventually add thumbs up feature-->
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2 id = "first"><a href ="#">Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class="comments">nummber of comments</p>
-            </div>
-          </div>
+		
+		<!-- defauly is just to disply newest (say limit top 20) -->
+		<?php
+		if($stat = $connection->prepare("select ")) {
+			$stat->bind_param("s", $user);
+			$stat->execute();
+			$res = $stat->get_result();
+			
+			while($row = $res->fetch_assoc()){
+				//$postPic = ?? magic
+				$date = $row->postDate;
+				$title = $row->$title;
+				$numComments = $row->numCom;		
+				echo"
+				  <div class=\"entry\"><!-- eventually add thumbs up feature-->
+					<figure>
+					  <img src=\"images/blank.jpg\" alt=\"Post Picture\" /> <!--ADD PIC MAGIC -->
+					</figure>
+					<div>
+					  <h2 id = \"first\"><a href =\"#\">Thread Title</a></h2>
+					  <p><a href=\"#\">author</a>    |        date/time</p>
+					  <p class=\"comments\">nummber of comments</p>
+					</div>
+				  </div>";
+		?>
 
-          <div class="entry">
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2><a href ="#" >Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class="comments">number of comments</p>
-            </div>
-          </div>
-
-          <div class="entry">
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2><a href ="#">Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class = "comments">number of comments</p>
-            </div>
-          </div>
         </article>
       </div>
 
@@ -81,9 +77,9 @@
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>
-              <input id="np-category" type="radio" name="category" value="category 1" required>Category 1<br>
-              <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
-              <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
+              <input id="np-category" type="radio" name="category" value="1" required>health and nutrition<br>
+              <input id="np-category" type="radio" name="category" value="2">behaviour<br>
+              <input id="np-category" type="radio" name="category" value="3">funny stories
             </div>
             <div class="form-row">
               <label for="np-image" class="top">Image: </label>
