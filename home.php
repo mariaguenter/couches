@@ -98,7 +98,7 @@
         </div>
 
         <?php } else { ?>
-        <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
+        <p class="centerP">Please <a href="login.php">LOGIN</a> to make a post</p>
         <?php } ?>
         <img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
       </article>

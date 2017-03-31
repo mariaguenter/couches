@@ -2,7 +2,7 @@
 
 // We don't won't to allow just anybody to have access to this page.  So we set
 // a manual flag for access, or check to see if the accessor is an admin.
-$update_access = FALSE;
+$update_access = TRUE; // MARIA READ THIS set true when testing, make sure to set false on hand in! 
 
 if (empty($_SESSION)) {
   session_start();

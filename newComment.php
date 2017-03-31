@@ -12,8 +12,8 @@
 				
 			
 
-				//maria-check all my names are correct with database
-				if($stat = $connection->prepare("insert into comment(content, author, postid) values (?,?,?)") ){
+	
+				if($stat = $connection->prepare("insert into comments(content, author, postid) values (?,?,?)") ){
 					$stat->bind_param("sss", $content, $username, $postid);
 					$stat->execute();
 					$stat->close();

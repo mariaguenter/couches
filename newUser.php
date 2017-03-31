@@ -15,10 +15,10 @@
 				$question = 'What is the breed of your current cat?';
 			}else if ($option == 'name'){
 				$question = 'What was your first cats\' name?';
-			}
+			
 			}else if ($option == 'sum'){
 				$question = 'How many cats have you owned?';
-			}
+			
 			}else if ($option == 'artist'){
 				$question = 'If you could name your cat after a celebrity, who would it be?';
 			}			
@@ -28,7 +28,7 @@
 				
 			
 			
-			if($stat = $connection->prepare("select * from user where username=? or email = ?")){ 
+			if($stat = $connection->prepare("select * from user where username = ? or email = ?")){ 
 			$stat->bind_param("ss", $user, $email);
 			$stat->execute();
 			$res = $stat->get_result();
@@ -133,6 +133,7 @@
 			
 			$connection->close();
 			header('Location: profile.php');
+		
 		}
 	}
 	

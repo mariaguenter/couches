@@ -8,17 +8,15 @@
 		if (isset($_POST['np-title']) && isset($_POST['np-content'])  && isset($_POST['category'])  && isset($_POST['np-image']) ) { //dont know if catgory name thing is correct
 			$title = $_POST['np-title'];
 			$content = $_POST['np-content'];
-			$category = $_POST['category'];
+			$category = $_POST['category']; //not sure if corrrect
 			$pic = $_POST['np-image'];
-			$date = current date?? // need to check sql file
-			$rating = 0; //check sql file
+			$rating = 0;
 			$username = $_SESSION['username']; 
 				
 			
 
-				//check all my names are correct with database
-				if($stat = $connection->prepare("insert into post(title, content, category, date, rating, author) values (?,?,?,?,?,?)") ){
-					$stat->bind_param("ssssss", $title, $content, $category, $date, $rating, $username);
+				if($stat = $connection->prepare("insert into post(title, content, category, rating, author) values (?,?,?,?,?)") ){
+					$stat->bind_param("sssss", $title, $content, $category, $rating, $username);
 					$stat->execute();
 					$stat->close();
 				

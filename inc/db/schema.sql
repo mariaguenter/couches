@@ -1,3 +1,6 @@
+INSERT INTO user (username, fname, lname, email, pass, quest, ans, adminPriv) 
+	VALUES ('captain', 'Mr', 'Boss', 'bossman@gmail.com', 'pass', 'If you could name your cat after a celebrity, who would it be?', 'Ozzy Osbourne', TRUE);
+
 CREATE TABLE sqlCommands (
   id INT NOT NULL AUTO_INCREMENT,
   command VARCHAR(255),

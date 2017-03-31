@@ -42,9 +42,12 @@ DELIVERABLE 2
 ^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users)
 ^ edit processSearchost.php 
 
-* check newComment and newPost with database names (and 3 edit proess pages)
+
 * once database up - fill it with some stuff (maria)
-* once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
+	3 users	
+	5 posts 
+	
+* once database up - make comment function/post page/home page/profile actually link to database (i thiiink I can handle that)
 
 * preliminary summary document, indicating implememnted functionality (maria) ?
 
@@ -67,6 +70,7 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 * 404 page change text
 * "are you sure" admin stuff
 * super easy admin reports
+* profile dispaly comments as well
 
 
 
