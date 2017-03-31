@@ -41,13 +41,12 @@ DELIVERABLE 2
 ^ edit processChangePic.php to update picture
 ^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users)
 ^ edit processSearchost.php 
-^ edit 
+^ edit profile.php to dispaly photos (get them from database)
+^ edit home.php to display photos (get them from the database) 
+^ edit home.php to link authors names and post titles
 
-* once database up - fill it with some stuff (maria)
-	3 users	
-	5 posts 
 	
-* once database up - post page/home page actually link to database (i thiiink I can handle that)
+
 
 * preliminary summary document, indicating implememnted functionality (maria) ?
 

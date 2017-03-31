@@ -35,14 +35,14 @@
 		
 		<!-- defauly is just to disply newest (say limit top 20) -->
 		<?php
-		if($stat = $connection->prepare("select ")) {
-			$stat->bind_param("s", $user);
+		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post, comments where post.postid = comments.postid group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by post.postDate DESC, post.rating DESC")) {
 			$stat->execute();
 			$res = $stat->get_result();
 			
 			while($row = $res->fetch_assoc()){
 				//$postPic = ?? magic
 				$date = $row->postDate;
+				$author = $row->author;
 				$title = $row->$title;
 				$numComments = $row->numCom;		
 				echo"
@@ -51,11 +51,13 @@
 					  <img src=\"images/blank.jpg\" alt=\"Post Picture\" /> <!--ADD PIC MAGIC -->
 					</figure>
 					<div>
-					  <h2 id = \"first\"><a href =\"#\">Thread Title</a></h2>
-					  <p><a href=\"#\">author</a>    |        date/time</p>
-					  <p class=\"comments\">nummber of comments</p>
+					  <h2 id = \"first\"><a href =\"#\">" . $title . "</a></h2> <!-- MAKE LINK TO POST PAGE ID HOW -->
+					  <p><a href=\"#\">" . $author . "</a>       |   ". "     " . $date . "</p> <!-- MAKE LINK TO authors profile PAGE ID HOW -->
+					  <p class=\"comments\">" . $numComments . "comments</p>
 					</div>
 				  </div>";
+			}
+		}
 		?>
 
         </article>
