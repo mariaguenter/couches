@@ -7,7 +7,7 @@ disableUser maybeee
 edit
 emailRecovery2
 enableUser maybee
-index
+index maybeee
 newComment
 newUser
 noMatch

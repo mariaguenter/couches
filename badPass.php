@@ -9,7 +9,7 @@
 
     <?php include ('inc/header.inc.php'); 
 	  if (isset($_SESSSION['username'])) {
-		header('Location: home.php'); //change
+		header('Location: cosc360.ok.ubc.ca/33354144/home.php'); 
 	  }
 
 	   echo"<h1>old password is incorrect</h1>";

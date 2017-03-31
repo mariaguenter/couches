@@ -23,7 +23,7 @@
 					
 			
 			$connection->close();
-			header("Location: ") //take to page for that post, idk what the link is for this tho
+			header("Location: cosc360.ok.ubc.ca/33354144/") //take to page for that post, idk what the link is for this tho
 		}
 	}
 	

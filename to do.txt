@@ -9,14 +9,14 @@ Delete them as you finish
 
 DELIVERABLE 2
 --------------
-^ home page categories filters chanee the content of the home page
+^ home page categories filters change the content of the home page
 ^ make the search bar actually search stuff and display results (by post title)
-^ validation on all forms! make things turn red and alert user if something is bad(mat) 
+^ validation on all forms! make things turn red and alert user if something is bad
 	Create Account
 		-reg exp for passwords: 7-15 characters, atleast one number
-		-password and confirm password the same
+		-password and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
 		-email includes @ and .
-		-profile picture is actually an image (idk waht else validation we would need for this, and it might npt even be javascript it might be done in the php i have no clue)
+		-profile picture is actually an image (idk waht else validation we would need for this, and it might not even be javascript it might be done in the php i have no clue)
 	Log in
 		-password and username are actually a thing in database (I have php to do this, if we have time make javascript to make it fancier)
 	Edit Profile
@@ -28,17 +28,16 @@ DELIVERABLE 2
 	Make Post	
 		-make sure image is actually an image (idk if this is javascript or php)
 	Search bar
-		-take out ' n stuff you know the drill
+		-take out apostrphe's? idk if we need anything here
 	Contact us
 		-email . @ 
 	
 ^ post on cosc360.ok.ubc.ca (mat)
-^ (not super importnat aka DO NOT DO UNLESS FREE TIME) make the category labels line up with the buttons nicely (I tried and gave up)
 ^ finish post.php (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff. also once in the post.php page i have no idea how to write the query for it)
 ^ edit newUser.php to store the photo they upload
 ^ edit newPost.php to store the photo they upload. also make link at the end take you to the post page but idk what the link would be for that
-^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
-^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
+^ edit processSearchUser page to add functionallity of retrieving photo and displaying it (its can be hella ugly its ok, its just the admin page) 
+^ edit processSearchPost page to add functionallity of retrieving photo and displaying it(its can be hella ugly its ok, its just the admin page) 
 ^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database. also edit so that it redirects you to the post page for that post
 ^ edit processChangePic.php to update picture
 ^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users' profiles)
@@ -55,6 +54,7 @@ DELIVERABLE 2
 
 DELIVERABLE 3
 --------------
+^ (not super importnat aka DO NOT DO UNLESS FREE TIME) make the category labels line up with the buttons nicely (I tried and gave up)
 ^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
 *^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 * click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )

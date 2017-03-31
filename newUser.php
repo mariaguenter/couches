@@ -10,6 +10,7 @@
 			$user = $_POST['username'];
 			$email = $_POST['email'];
 			$pass = $_POST['password'];
+			$confirmPass = $_POST['confirmPassword'];
 			$option = $_POST['question'];
 			if ($option == 'breed'){
 				$question = 'What is the breed of your current cat?';
@@ -36,10 +37,13 @@
 
 			while ($row = $res->fetch_assoc()) {
 				$exists = true;
-				header('Location: alreadyUser.php');
+				header('Location: cosc360.ok.ubc.ca/33354144/alreadyUser.php');
 				break;
 			}
 			$stat->close();
+			}
+			if($pass != $confirmPass){
+				header('Location: cosc360.ok.ubc.ca/33354144/newUserNoMatch.php");
 			}
 			
 			if($exists == false){
@@ -132,7 +136,7 @@
 			
 			
 			$connection->close();
-			header('Location: profile.php'); //change
+			header('Location: cosc360.ok.ubc.ca/33354144/profile.php'); 
 		
 		}
 	}

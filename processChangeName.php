@@ -16,4 +16,4 @@
 	}	
 	
 	
-	header("Location: profile.php"); //change
+	header("Location: cosc360.ok.ubc.ca/33354144/profile.php"); 
