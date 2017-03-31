@@ -12,14 +12,14 @@
       $user = $_POST['username'];
       $pass = $_POST['password'];
 
-      if ($stat = $connection->prepare("select * from users where username=? and password=?")) {
+      if ($stat = $connection->prepare("select * from user where username = ? and password = ?")) {
         $pass2 = md5($pass);
         $stat->bind_param("ss", $user, $pass2);
         $stat->execute();
         $res = $stat->get_result();
 
         while ($row = $res->fetch_assoc()) {
-          $exists = true;
+          $exists = TRUE;
           $_SESSION['username'] = $user;
           $admin = $row->adminPriv;
           if ($admin == TRUE){
@@ -31,16 +31,16 @@
         }
         $stat->close();
       }
-
+		
       if (!$exists) {
-        header('Location: login.php');
+        header('Location: badLogin.php');
       }
     } else {
-      //header('Location: login.php'); ???
+      header('Location: login.php');
     }
 
     $connection->close();
 
   } else {
-      //header('Location: login.php'); ???
+      header('Location: login.php'); 
   }

@@ -1,27 +1,16 @@
-<?php 
-	session_start();
-	if($_SESSION['admin'] == False || isset($_SESSION['admin']) == False){
-		header("Location: home.php");
-	}
+<?php
+  $title = "Search Posts";
+  if (empty($_SESSION['admin'])) {
+    header("Location: home.php");
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair Display">
-    <meta charset="utf-8">
-    <title>Admin Controls</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" href="images/thumbnail.png">
-  </head>
+  <?php require 'inc/head.inc.php'; ?>
 
   <body>
-<?php
-
-  require 'header.php';
+    <?php require 'inc/header.inc.php'; 
 
 	require 'connection.php';
 		$exists = false;
@@ -31,7 +20,7 @@
 		$category = "Not Found";
 		$rating = "Not Found";
 		$count = 0;
-		$content  "Not Found";
+		$content =  "Not Found";
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if (isset($_POST['username'])) {
 				$title = $_POST['postTitle'];
@@ -52,7 +41,7 @@
 					$category = $row->category;
 					$rating = $row->rating;
 					$count = $row->numCom;
-					$content  $row->content;	
+					$content = $row->content;	
 					//code on how to get the image (MAT??)					
 					echo "
 					<fieldset>
@@ -65,7 +54,7 @@
 						Rating: $rating <br>
 						Number of Comments: $numCom <br>
 					</fieldset>
-					<br>";
+					<br><br>";
 					
 					//echo '<img src="data:image/'.$type.';base64,'.base64_encode($image).'"/>';   NEED TO CHANGE THIS
 			
@@ -80,6 +69,10 @@
 					
 				}
 				$stat->close();
+				}
+				while(!$exists){
+					echo"<h1>no results</h1>";
+					echo"<p><a href =\"admin.php\">return</a></p>";
 				}
 
 			

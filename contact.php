@@ -14,19 +14,19 @@
           <legend>Contact Us</legend>
           <p>
             <label class="contactFields">Email:</label>
-            <input type="email" name="email" required/>
+            <input type="email" name="email" maxlength = "50" required/>
           </p>
           <p>
             <label class="contactFields">Name:</label>
-            <input type="text" name="name" required/>
+            <input type="text" name="name" maxlength = "50"  required/>
           </p>
           <p>
             <label class="contactFields">Subject:</label>
-            <input type="text" name="subject" required/>
+            <input type="text" name="subject" maxlength = "30" required/>
           </p>
           <p>
             <label class="contactFields">Message:</label>
-            <textarea name="message" required></textarea>
+            <textarea name="message"maxlength = "250"  required></textarea>
           </p>
           <input type = "submit"/>
         </form>

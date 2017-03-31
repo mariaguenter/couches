@@ -1,7 +1,7 @@
 <?php
   $title = "Edit Profile";
   if (empty($_SESSION['username'])){
-    header("Location: index.php");
+    //header("Location: login.php");
   }
 ?>
 
@@ -11,32 +11,31 @@
 
   <body>
   <?php require 'inc/header.inc.php'; ?>
-<!-- No idea if this page works, havent looked at it in browser, gotta go to class now-->
-    <form action="" method = "post" id = "createAccountForm">
-      <h1>change email</h1>
+    <form action="processChangeName.php" method = "post" id = "createAccountForm"> 
+      <h1>change name</h1>
       <p>
-        <label class = "contactFields">change email:</label>
-        <input type="email" name="email" required/>
+        <label class = "contactFields">first name:</label>
+        <input type="text" name="fname" maxlength = "30" required/>
+		<br>
+        <label class = "contactFields">last name:</label>
+        <input type="text" name="lname" maxlength = "30" required/>		
       </p>
       <input type = "submit" value = "submit"/>
     </form>
-    <form action="" method = "post" id = "createAccountForm">
+    <form action="processChangePasswrod.php" method = "post" id = "createAccountForm">
       <h1>change password</h1>
-      <p>
         <label class = "contactFields">old password:</label>
-        <input type="password" name="password"required />
-      </p>
-      <p>
+        <input type="password" name="oldpassword" maxlength = "15" required />
+		<br>
         <label class = "contactFields">new password:</label>
-        <input type="password" name="password"required />
-      </p>
-      <p>
+        <input type="password" name="newpassword" maxlength = "15" required />
+		<br>
         <label class = "contactFields">confirm password:</label>
-        <input type="password" name="confirmPassword" required/>
-      </p>
+        <input type="password" name="confirmPassword" maxlength = "15"  required/>
+		<br>
       <input type = "submit" value="submit"/>
     </form>
-    <form action="" method = "post" id = "createAccountForm">
+    <form action="processChangePic.php" method = "post" id = "createAccountForm">
       <h1>change profile picture</h1>
       <p>
         <label class = "contactFields">picture:</label>

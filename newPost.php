@@ -1,55 +1,25 @@
 <?php
+
+
 	
 	require 'connection.php';
 
-	$exists = false;
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		if (isset($_POST['firstname']) && isset($_POST['lastname'])  && isset($_POST['username'])  && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmPassword']) && isset($_POST['question']) && isset($_POST['answer']) && isset($_POST['profilePic']) ) {
-			$fname = $_POST['firstname'];
-			$lname = $_POST['lastname'];
-			$user = $_POST['username'];
-			$email = $_POST['email'];
-			$pass = $_POST['password'];
-			$option = $_POST['question'];
-			if ($option == 'breed'){
-				$question = 'What is the breed of your current cat?';
-			}else if ($option == 'name'){
-				$question = 'What was your first cats\' name?';
-			
-			}else if ($option == 'sum'){
-				$question = 'How many cats have you owned?';
-			
-			}else if ($option == 'artist'){
-				$question = 'If you could name your cat after a celebrity, who would it be?';
-			}			
-			$answer = $_POST['answer'];
-			$pictue = $_POST['profilePic'];
-			$_SESSION['username'] = $user;
+		if (isset($_POST['np-title']) && isset($_POST['np-content'])  && isset($_POST['category'])  && isset($_POST['np-image']) ) { //dont know if catgory name thing is correct
+			$title = $_POST['np-title'];
+			$content = $_POST['np-content'];
+			$category = $_POST['category']; //not sure if corrrect
+			$pic = $_POST['np-image'];
+			$rating = 0;
+			$username = $_SESSION['username']; 
 				
-			
-			
-			if($stat = $connection->prepare("select * from user where username = ? or email = ?")){ 
-			$stat->bind_param("ss", $user, $email);
-			$stat->execute();
-			$res = $stat->get_result();
 			
 
-			while ($row = $res->fetch_assoc()) {
-				$exists = true;
-				header('Location: alreadyUser.php');
-				break;
-			}
-			$stat->close();
-			}
-			
-			if($exists == false){
-				
-				if($stat = $connection->prepare("insert into user(username, fname, lname, email, pass, quest, ans) values (?,?,?,?,?,?,?)") ){
-					$pass = md5($pass);
-					$stat->bind_param("sssssss", $user, $fname, $lname, $email, $pass, $quetsion, $answer);
+				if($stat = $connection->prepare("insert into post(title, content, category, rating, author) values (?,?,?,?,?)") ){
+					$stat->bind_param("sssss", $title, $content, $category, $rating, $username);
 					$stat->execute();
 					$stat->close();
-		
+				
 					
 
 					
@@ -132,8 +102,7 @@
 			
 			
 			$connection->close();
-			header('Location: profile.php');
-		
+			header("Location: ") //take to page for that post, idk what the link is for this tho
 		}
 	}
 	

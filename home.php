@@ -7,13 +7,15 @@
 
   <body>
 
-    <?php require 'inc/header.inc.php'; ?>
+    <?php require 'inc/header.inc.php'; 
+		require 'connection.php';
+	?>
 
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
-          <li><a href="#">top</a></li>
-          <li><a href="#">new</a></li>
+          <li><a href="#">top</a></li> <!-- change what is displayed, chagne the query i guess? I have no clue -->
+          <li><a href="#">new</a></li> <!-- this is the default -->
           <li><a href="#">health and nutrition</a></li>
           <li><a href="#">behaviour</a></li>
           <li><a href="#">funny stories</a></li>
@@ -30,38 +32,34 @@
         </div>
 
         <article id="center">
-          <div class="entry"><!-- eventually add thumbs up feature-->
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2 id = "first"><a href ="#">Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class="comments">nummber of comments</p>
-            </div>
-          </div>
+		
+		<!-- defauly is just to disply newest (say limit top 20) -->
+		<?php
+		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post, comments where post.postid = comments.postid group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by post.postDate DESC, post.rating DESC")) {
+			$stat->execute();
+			$res = $stat->get_result();
+			
+			while($row = $res->fetch_assoc()){
+				//$postPic = ?? magic
+				$date = $row->postDate;
+				$author = $row->author;
+				$title = $row->$title;
+				$numComments = $row->numCom;		
+				echo"
+				  <div class=\"entry\"><!-- eventually add thumbs up feature-->
+					<figure>
+					  <img src=\"images/blank.jpg\" alt=\"Post Picture\" /> <!--ADD PIC MAGIC -->
+					</figure>
+					<div>
+					  <h2 id = \"first\"><a href =\"#\">" . $title . "</a></h2> <!-- MAKE LINK TO POST PAGE ID HOW -->
+					  <p><a href=\"#\">" . $author . "</a>       |   ". "     " . $date . "</p> <!-- MAKE LINK TO authors profile PAGE ID HOW -->
+					  <p class=\"comments\">" . $numComments . "comments</p>
+					</div>
+				  </div>";
+			}
+		}
+		?>
 
-          <div class="entry">
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2><a href ="#" >Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class="comments">number of comments</p>
-            </div>
-          </div>
-
-          <div class="entry">
-            <figure>
-              <img src="images/blank.jpg" alt="" />
-            </figure>
-            <div>
-              <h2><a href ="#">Thread Title</a></h2>
-              <p><a href="#">author</a>    |        date/time</p>
-              <p class = "comments">number of comments</p>
-            </div>
-          </div>
         </article>
       </div>
 
@@ -70,20 +68,20 @@
         <div class="new-post-container hidden">
           <p class="centerP">Write new post</p>
 		      <?php if (isset($_SESSION['username'])) { ?>
-          <form id="side-bar-new-post" action="">
+          <form id="side-bar-new-post" action="newPost.php">
             <div class="form-row">
               <label for="np-title" class="top">Title: </label>
-              <input id="np-title" type="text" required/>
+              <input id="np-title" type="text" maxlength = "30" required/>
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content" placeholder="max 800 characters" required></textarea>
+              <textarea id="np-content" placeholder="max 800 characters" maxlength = "900"  required></textarea>
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>
-              <input id="np-category" type="radio" name="category" value="category 1">Category 1<br>
-              <input id="np-category" type="radio" name="category" value="category 2">Category 2<br>
-              <input id="np-category" type="radio" name="category" value="category 3">Category 3<br>
+              <input id="np-category" type="radio" name="category" value="1" required>health and nutrition<br>
+              <input id="np-category" type="radio" name="category" value="2">behaviour<br>
+              <input id="np-category" type="radio" name="category" value="3">funny stories
             </div>
             <div class="form-row">
               <label for="np-image" class="top">Image: </label>
@@ -98,7 +96,7 @@
         </div>
 
         <?php } else { ?>
-        <p class="centerP">Please <a href="login.html">LOGIN</a> to make a post</p>
+        <p class="centerP">Please <a href="login.php">LOGIN</a> to make a post</p>
         <?php } ?>
         <img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
       </article>

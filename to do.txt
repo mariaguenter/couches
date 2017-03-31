@@ -7,53 +7,48 @@ Legend:	* - Maria	^ - Mat		*^* - Both
 
 DELIVERABLE 2
 --------------
-^ home page categories filters chagne the content of the home page(mat)
-^ make the search bar actually search stuff (mat)
-^ validation on all forms! (mat) 
-	EVERYTING
-		-no sketchy sql injections
+*^ home page categories filters chanee the content of the home page (I will try but it sounds scary)
+^ make the search bar actually search stuff and display results (mat)
+^ validation on all forms! make things turn red and alert user if something is bad(mat) 
 	Create Account
 		-reg exp for passwords: 7-15 characters, atleast one number
 		-password and confirm password the same
-		-username unique (and max 30 characters)
-		-email unique (cant make two accounts under same email)
-		-first name, last name, securtiy answer all less than 30 charcters
-		-email less than 50, includes @ and .
-		-profile picture is actually an image
+		-email includes @ and .
+		-profile picture is actually an image (idk waht else validation we would need for this, and it might npt even be javascript it might be done in the php i have no clue)
 	Log in
-		-password and username are actually a thing
+		-password and username are actually a thing in database (I have php to do this, if we have time make javascript to make it fancier)
 	Edit Profile
 		-picture actualy image
-		-email has @ . and max 50
-		-password as usual
+		-email has @ .
+		-old password is correct (I have php to do this, if we have time make javascript to make it fancier)
+		-new password is 7-15 chars, atleast one number
+		-passwrod and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
 	Make Post	
-		-Title has max 30 characters
-		-content max 800 characters
-	Comment
-		-max 500 chars
+		-make sure image is actually an image (idk if this is javascript or php)
 	Search bar
-		-no sketchy sql injections (scott said hes not gonna try and break it though, cause its not a databases course so this doenst need to be fancy)
 		-take out ' n stuff you know the drill
 	Contact us
-		-email . @ max 50
+		-email . @ 
+	
 ^ post on cosc360.ok.ubc.ca (mat)
 ^ (not super importnat) make the category labels line up with the buttons nicely (I tried and gave up)
-^ finish post.php (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff)
+^ finish post.php (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff. also once in the post.php page i have no idea how to write the query for it)
 ^ edit newUser.php to store the photo they upload
-^ edit newPost.php yo store the photo they upload
+^ edit newPost.php to store the photo they upload
 ^ edit processSearchUser page to add functionallity of retrieving photo and displaying it
 ^ edit processSearchPost page to add functionallity of retrieving photo and displaying it
+^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database
+^ edit processChangePic.php to update picture
+^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users)
+^ edit processSearchost.php 
+^ edit profile.php to dispaly photos (get them from database)
+^ edit home.php to display photos (get them from the database) 
+^ edit home.php to link authors names and post titles
 
-* make newComment.php 
-* make newPost.php
-* make three process edit pages
+	
 
-* once database up - fill it with some stuff (maria)
-* once database up - make log in/create account/comment/submit post/home page/profile actually link to database (i thiiink I can handle that)
-* edit post page for authors profile stuff
-* edit processlogin.php for else satetements (and any other process things)
 
-* preliminary summary document, indicating implememnted functionality (maria)
+* preliminary summary document, indicating implememnted functionality (maria) ?
 
 
 
@@ -62,7 +57,6 @@ DELIVERABLE 3
 ^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
 *^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 * click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
-^ make the search button in the footer link to the search bar on home page (i tried and couldnt figure it out, we cant just get rid of this if its too hard)
 ^ make comments collapsable? (If mat knows how to do this)
 * make footer go to bottom when small page
 styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; javascript buttons)
@@ -71,6 +65,11 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 * ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
 * summary of features implemented (maria)
 * 6 page report stuff (maria)
+* 404 page change text
+* "are you sure" admin stuff
+* super easy admin reports
+* profile dispaly comments as well
+
 
 
 anything else on addition list (maybe try to do one thing from the list)
