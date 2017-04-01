@@ -30,10 +30,10 @@
 							$stat->execute();	
 						}
 					}else{
-						header("Location: noMatch.php");
+						header("Location: cosc360.ok.ubc.ca/33354144/noMatch.php"); 
 					}	
 				}else{
-					header("Location: badPass.php");
+					header("Location: cosc360.ok.ubc.ca/33354144/badPass.php"); 
 				}
 			
 				$stat->close();
@@ -47,4 +47,4 @@
 	}	
 	
 	
-	header("Location: profile.php");
+	header("Location: cosc360.ok.ubc.ca/33354144/profile.php"); 

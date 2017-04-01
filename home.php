@@ -14,7 +14,7 @@
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
-          <li><a href="#">top</a></li> <!-- change what is displayed, chagne the query i guess? I have no clue -->
+          <li><a href="#">top</a></li> <!-- change what is displayed, chagne the query i guess? I have no clu. Need to make the links work -->
           <li><a href="#">new</a></li> <!-- this is the default -->
           <li><a href="#">health and nutrition</a></li>
           <li><a href="#">behaviour</a></li>

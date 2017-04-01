@@ -1,0 +1,19 @@
+Files that need to change header("Location:)
+
+badPass
+deletePost maybeee
+deleteUser maybeee
+disableUser maybeee
+edit
+emailRecovery2
+enableUser maybee
+index maybeee
+newComment
+newUser
+noMatch
+rocessChangeName
+processChangePass x3
+processlogin
+processearchpost
+proecsssearchuser
+profile

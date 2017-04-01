@@ -8,7 +8,7 @@
 				$stat->bind_param("s", $postid);
 				$stat->execute();
 				$stat->close();
-				header('Location: ' . $_SERVER['HTTP_REFERER']);
+				header('Location: ' . $_SERVER['HTTP_REFERER']); //change? or will it be ok?
 				}
 				
 				$connection->close();

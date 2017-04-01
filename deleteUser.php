@@ -9,7 +9,7 @@
 				$stat->bind_param("s", $user);
 				$stat->execute();
 				$stat->close();
-				header('Location: ' . $_SERVER['HTTP_REFERER']);
+				header('Location: ' . $_SERVER['HTTP_REFERER']); //change maybe?
 				}
 				
 				$connection->close();

@@ -13,7 +13,7 @@
 	  }
 
 	   echo"<h1>password and confirm password dont match</h1>";
-	   echo"<p><a href =\"edit.php\">return</a></p>";
+	   echo"<p><a href =\"login.php\">return</a></p>";
 	?>
 	
 	

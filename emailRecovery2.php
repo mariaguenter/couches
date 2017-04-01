@@ -9,7 +9,7 @@
 
     <?php include ('inc/header.inc.php'); 
 	  if (isset($_SESSSION['username'])) {
-		header('Location: home.php');
+		header('Location: cosc360.ok.ubc.ca/33354144/home.php');
 	  }
 
 	  require 'connection.php';
@@ -27,7 +27,7 @@
           $exists = true;
           $_SESSION['username'] = $user;
 		  echo "<h1>	An email will be sent shortly</h1>";
-		  //ADD STUFF HERE FOR EMAIL STUFF 
+		  //ADD STUFF HERE FOR EMAIL STUFF LATER
           break;
         }
         $stat->close();

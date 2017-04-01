@@ -1,4 +1,4 @@
-<?php   //Stolen from lab 9 -- need to change it
+<?php   
 
   $localhosts = array("::1", "localhost", "127.0.0.1", "192.168.0.1", "192.168.0.0");
   $hostname = $_SERVER['REMOTE_ADDR'];
