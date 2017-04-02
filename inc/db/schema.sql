@@ -1,10 +1,3 @@
-ALTER TABLE post MODIFY pic VARCHAR(255);
-
-ALTER TABLE user MODIFY quest VARCHAR(255);
-ALTER TABLE user MODIFY ans VARCHAR(255);
-ALTER TABLE user MODIFY profilePic VARCHAR(255);
-ALTER TABLE user MODIFY pass VARCHAR(127);
-
 CREATE TABLE sqlCommands (
   id INT NOT NULL AUTO_INCREMENT,
   command VARCHAR(255),
@@ -46,3 +39,10 @@ create table comments (
 	foreign key (author) references user(username),
 	foreign key (postid) references post(postid)
 );
+
+ALTER TABLE post MODIFY pic VARCHAR(255);
+
+ALTER TABLE user MODIFY quest VARCHAR(255);
+ALTER TABLE user MODIFY ans VARCHAR(255);
+ALTER TABLE user MODIFY profilePic VARCHAR(255);
+ALTER TABLE user MODIFY pass VARCHAR(127);

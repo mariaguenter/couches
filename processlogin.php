@@ -6,7 +6,7 @@
   }
 
   if (isset($_SESSION['username'])) {
-    header('Location: home.php');//cosc360.ok.ubc.ca/33354144/home.php');
+    header('Location: cosc360.ok.ubc.ca/33354144/home.php');
   }
 
   require 'connection.php';
@@ -29,7 +29,7 @@
           if ($admin == TRUE){
             $_SESSION['admin'] = $admin;
           }
-          header('Location: home.php');//cosc360.ok.ubc.ca/33354144/home.php');
+          header('Location: cosc360.ok.ubc.ca/33354144/home.php');
 
           break;
         }
@@ -37,14 +37,14 @@
       }
 		
       if (!$exists) {
-        header('Location: /badLogin.php');//cosc360.ok.ubc.ca/33354144/badLogin.php');
+        header('Location: cosc360.ok.ubc.ca/33354144/badLogin.php');
       }
     } else {
-      header('Location: /login.php');//cosc360.ok.ubc.ca/33354144/login.php');
+      header('Location: cosc360.ok.ubc.ca/33354144/login.php');
     }
 
     $connection->close();
 
   } else {
-    header('Location: /login.php');//cosc360.ok.ubc.ca/33354144/login.php');
+    header('Location: cosc360.ok.ubc.ca/33354144/login.php');
   }

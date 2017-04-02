@@ -86,9 +86,9 @@
 		
 		<!-- defauly is just to disply newest (say limit top 20) -->
 		<?php
-		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid $where group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by $order DESC, post.rating DESC")) {
-			$stat->execute();
-			$res = $stat->get_result();
+		if($stat = $connection->query("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid $where group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by $order DESC, post.rating DESC")) {
+			//if(!$stat->execute())(die($stat->error));
+			$res = $stat;//->get_result();
 			
 			while($row = $res->fetch_assoc()){
 			  $post_id = $row['postid'];

@@ -12,20 +12,12 @@ DELIVERABLE 2
 	Create Account
 		-reg exp for passwords: 7-15 characters, atleast one number
 		-password and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
-		-email includes @ and .
-		-profile picture is actually an image (idk waht else validation we would need for this, and it might not even be javascript it might be done in the php i have no clue)
-	Log in
-		-password and username are actually a thing in database (I have php to do this, if we have time make javascript to make it fancier)
 	Edit Profile
 		-picture actualy image
 		-email has @ .
 		-old password is correct (I have php to do this, if we have time make javascript to make it fancier)
 		-new password is 7-15 chars, atleast one number
 		-passwrod and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
-	Make Post	
-		-make sure image is actually an image (idk if this is javascript or php)
-	Search bar
-		-take out apostrphe's? idk if we need anything here
 	Contact us
 		-email . @ 
 

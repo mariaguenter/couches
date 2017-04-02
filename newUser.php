@@ -38,14 +38,14 @@
 
         while ($row = $res->fetch_assoc()) {
           $exists = true;
-          header('Location: /alreadyUser.php');//cosc360.ok.ubc.ca/33354144/alreadyUser.php');
+          header('Location: cosc360.ok.ubc.ca/33354144/alreadyUser.php');
           break;
         }
 
 			  $stat->close();
 			}
 			if ($pass != $confirmPass){
-				header('Location: /newUserNoMatch.php');//cosc360.ok.ubc.ca/33354144/newUserNoMatch.php');
+				header('Location: cosc360.ok.ubc.ca/33354144/newUserNoMatch.php');
 			}
 			
 			if ($exists == false) {
@@ -114,6 +114,6 @@
 			}
       
 			$connection->close();
-			header('Location: /profile.php');//cosc360.ok.ubc.ca/33354144/profile.php');
+			header('Location: cosc360.ok.ubc.ca/33354144/profile.php');
 		}
 	}
