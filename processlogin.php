@@ -1,8 +1,12 @@
 
 
 <?php
-  if (isset($_SESSSION['username'])) {
-    header('Location: cosc360.ok.ubc.ca/33354144/home.php');
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
+  if (isset($_SESSION['username'])) {
+    header('Location: home.php');//cosc360.ok.ubc.ca/33354144/home.php');
   }
 
   require 'connection.php';
@@ -12,7 +16,7 @@
       $user = $_POST['username'];
       $pass = $_POST['password'];
 
-      if ($stat = $connection->prepare("select * from user where username = ? and password = ?")) {
+      if ($stat = $connection->prepare("select * from user where username = ? and pass = ?")) {
         $pass2 = md5($pass);
         $stat->bind_param("ss", $user, $pass2);
         $stat->execute();
@@ -25,7 +29,7 @@
           if ($admin == TRUE){
             $_SESSION['admin'] = $admin;
           }
-          header('Location: cosc360.ok.ubc.ca/33354144/home.php'); 
+          header('Location: home.php');//cosc360.ok.ubc.ca/33354144/home.php');
 
           break;
         }
@@ -33,14 +37,14 @@
       }
 		
       if (!$exists) {
-        header('Location: cosc360.ok.ubc.ca/33354144/badLogin.php'); 
+        header('Location: /badLogin.php');//cosc360.ok.ubc.ca/33354144/badLogin.php');
       }
     } else {
-      header('Location: cosc360.ok.ubc.ca/33354144/login.php');
+      header('Location: /login.php');//cosc360.ok.ubc.ca/33354144/login.php');
     }
 
     $connection->close();
 
   } else {
-      header('Location: cosc360.ok.ubc.ca/33354144/login.php'); 
+    header('Location: /login.php');//cosc360.ok.ubc.ca/33354144/login.php');
   }

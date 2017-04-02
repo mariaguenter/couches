@@ -1,4 +1,9 @@
-<?php $title = "Post"; ?>
+<?php
+  if (empty($_SESSION)) {
+    session_start();
+  }
+  $title = "Post";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -10,9 +15,9 @@
 <?php
 	
   require 'header.php';
-  
-  
-//I have no idea how to all get this from the database based on the previous page ya know 
+
+
+
   $category = database stuff;
   $tite  = database stuff;
   $author = database stuff;

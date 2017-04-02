@@ -50,7 +50,7 @@ foreach ($sql_query as $query) {
   // If the query fails, stop execution and show the query that failed.
   if ($connection->query($query) === FALSE) {
     print "Successfully executed $count/$queries queries. <br>";
-    die("Failed to execute query: <br><pre>$query</pre>");
+    die("Failed to execute query: <br><pre>$query</pre><br>" . $connection->error);
     break;
   }
 

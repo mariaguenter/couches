@@ -30,7 +30,7 @@
         </p>
         <br/>
 
-        <form action="newUser.php" method = "post" id = "createAccountForm">
+        <form action="newUser.php" method = "post" id = "createAccountForm" enctype="multipart/form-data">
           <legend>create an account</legend>
           <p>
             <label class = "contactFields">first name</label>

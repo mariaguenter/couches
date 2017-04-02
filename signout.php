@@ -1,8 +1,11 @@
 <?php
   $title = "Signout";
 
-  unset($_SESSION['username']);
-  unset($_SESSION['admin']);
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
+  session_unset();
   session_destroy();
 ?>
 

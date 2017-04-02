@@ -1,4 +1,10 @@
-<?php $title = "Home"; ?>
+<?php //phpinfo();
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
+  $title = "Home";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -7,14 +13,15 @@
 
   <body>
 
-    <?php require 'inc/header.inc.php'; 
-		require 'connection.php';
-	?>
+    <?php
+      require 'inc/header.inc.php';
+      require 'connection.php';
+    ?>
 
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
-          <li><a href="#">top</a></li> <!-- change what is displayed, chagne the query i guess? I have no clu. Need to make the links work -->
+          <li><a href="#">top</a></li> <!-- change what is displayed, change the query i guess? I have no clu. Need to make the links work -->
           <li><a href="#">new</a></li> <!-- this is the default -->
           <li><a href="#">health and nutrition</a></li>
           <li><a href="#">behaviour</a></li>
@@ -35,24 +42,25 @@
 		
 		<!-- defauly is just to disply newest (say limit top 20) -->
 		<?php
-		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post, comments where post.postid = comments.postid group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by post.postDate DESC, post.rating DESC")) {
+		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by post.postDate DESC, post.rating DESC")) {
 			$stat->execute();
 			$res = $stat->get_result();
 			
 			while($row = $res->fetch_assoc()){
-				//$postPic = ?? magic
-				$date = $row->postDate;
-				$author = $row->author;
-				$title = $row->$title;
-				$numComments = $row->numCom;		
+			  $post_id = $row['postid'];
+				$postPic = empty($row['pic']) ? 'images/blank.jpg' : $row['pic'];
+				$date = $row['postDate'];
+				$author = htmlspecialchars($row['author']);
+				$post_title = htmlentities($row['title']);
+				$numComments = empty($row['numCom']) ? 0 : $row['numCom'];
 				echo"
 				  <div class=\"entry\"><!-- eventually add thumbs up feature-->
 					<figure>
-					  <img src=\"images/blank.jpg\" alt=\"Post Picture\" /> <!--ADD PIC MAGIC -->
+					  <img src=\"$postPic\" alt=\"Post Picture\" /> 
 					</figure>
 					<div>
-					  <h2 id = \"first\"><a href =\"#\">" . $title . "</a></h2> <!-- MAKE LINK TO POST PAGE ID HOW -->
-					  <p><a href=\"#\">" . $author . "</a>       |   ". "     " . $date . "</p> <!-- MAKE LINK TO authors profile PAGE ID HOW -->
+					  <h2 id = \"first\"><a href =\"post.php/id=$post_id\">" . $post_title . "</a></h2>
+					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
 					  <p class=\"comments\">" . $numComments . "comments</p>
 					</div>
 				  </div>";
@@ -68,14 +76,14 @@
         <div class="new-post-container hidden">
           <p class="centerP">Write new post</p>
 		      <?php if (isset($_SESSION['username'])) { ?>
-          <form id="side-bar-new-post" action="newPost.php">
+          <form id="side-bar-new-post" method="post" action="newPost.php" enctype="multipart/form-data">
             <div class="form-row">
               <label for="np-title" class="top">Title: </label>
-              <input id="np-title" type="text" maxlength = "30" required/>
+              <input id="np-title" name="np-title" type="text" maxlength = "30" required/>
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content" placeholder="max 800 characters" maxlength = "900"  required></textarea>
+              <textarea id="np-content" name="np-content" placeholder="max 800 characters" maxlength = "900"  required></textarea>
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>
@@ -85,7 +93,7 @@
             </div>
             <div class="form-row">
               <label for="np-image" class="top">Image: </label>
-              <input id="np-image" class="button" type="file"/>
+              <input id="np-image" name="np-image" class="button" type="file"/>
             </div>
 
             <input type="submit"/>
