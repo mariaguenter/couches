@@ -17,20 +17,16 @@
 	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isset($_POST['username'])) {
 		  $user = $_POST['username'];
+      $safe_user = $connection->real_escape_string($user);
 		
-		if ($stat = $connection->prepare("select * from users where username=?")) {
-        $stat->bind_param("s", $user);
-        $stat->execute();
-        $res = $stat->get_result();
-
-        while ($row = $res->fetch_assoc()) {
+		if ($stat = $connection->query("select * from users where username='$safe_user'")) {
+        while ($row = $stat->fetch_assoc()) {
           $exists = true;
           $_SESSION['username'] = $user;
 		  echo "<h1>	An email will be sent shortly</h1>";
 		  //ADD STUFF HERE FOR EMAIL STUFF LATER
           break;
         }
-        $stat->close();
       }
 
       if (!$exists) {

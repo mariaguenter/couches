@@ -13,27 +13,22 @@
   $exists = FALSE;
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
-      $user = $_POST['username'];
+      $user = $connection->real_escape_string($_POST['username']);
       $pass = $_POST['password'];
 
-      if ($stat = $connection->prepare("select * from user where username = ? and pass = ?")) {
-        $pass2 = md5($pass);
-        $stat->bind_param("ss", $user, $pass2);
-        $stat->execute();
-        $res = $stat->get_result();
+      $pass2 = md5($pass);
+      $stat = $connection->query("select * from user where username = '$user' and pass = '$pass2'");
 
-        while ($row = $res->fetch_assoc()) {
-          $exists = TRUE;
-          $_SESSION['username'] = $user;
-          $admin = $row['adminPriv'];
-          if ($admin == TRUE){
-            $_SESSION['admin'] = $admin;
-          }
-          header('Location: cosc360.ok.ubc.ca/33354144/home.php');
-
-          break;
+      while ($row = $res->fetch_assoc()) {
+        $exists = TRUE;
+        $_SESSION['username'] = $user;
+        $admin = $row['adminPriv'];
+        if ($admin == TRUE){
+          $_SESSION['admin'] = $admin;
         }
-        $stat->close();
+        header('Location: cosc360.ok.ubc.ca/33354144/home.php');
+
+        break;
       }
 		
       if (!$exists) {

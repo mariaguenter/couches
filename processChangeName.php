@@ -7,16 +7,11 @@
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if (isset($_POST['fname']) && isset($_POST['lname'])) {
-			$fname = $_POST['fname'];
-			$lname = $_POST['lname'];
-			$user = $_SESSION['username'];
-			
-			if($stat = $connection->prepare("update user set fname = ? and lname = ? where username=?" )){ 
-				$stat->bind_param("sss", $fname, $lname, $user);
-				$stat->execute();
-					
-			}
-			$stat->close();
+			$fname = $connection->real_escape_string($_POST['fname']);
+			$lname = $connection->real_escape_string($_POST['lname']);
+			$user = $connection->real_escape_string($_SESSION['username']);
+
+      $connection->query("update user set fname = '$fname' and lname = '$lname' where username='$user'");
 		}
 	}	
 

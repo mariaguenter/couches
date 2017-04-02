@@ -10,38 +10,29 @@ if (!isset($_SESSION)) {
 			$new = $_POST['newpassword'];
 			$old = $_POST['oldpassword'];
 			$new2 = $_POST['confirmpassword'];
-			$user = $_SESSION['username'];
+			$user = $connection->real_escape_string($_SESSION['username']);
 
-			if($stat = $connection->prepare("select * from user where username=? and password = ?")){ 
-				$old = md5($old);
-				$stat->bind_param("ss", $user, $old);
-				$stat->execute();
-				$res = $stat->get_result();
-			
+      $old = md5($old);
+      $stat = $connection->query("select * from user where username='$user' and password = '$old'");
 
-				while ($row = $res->fetch_assoc()) {
-					$exists = true;
-					break;
-				}
-				
-				$stat->close();
-				
-				if($exists){	
-					if($new == $new2){				
-						if($stat = $connection->prepare("update user set password = ? where username=?" )){ 
-							$pass = md5($new);
-							$stat->bind_param("ss", $pass, $user);
-							$stat->execute();	
-						}
-					}else{
-						header("Location: cosc360.ok.ubc.ca/33354144/noMatch.php"); 
-					}	
-				}else{
-					header("Location: cosc360.ok.ubc.ca/33354144/badPass.php"); 
-				}
-			
-				$stat->close();
-			}
+      while ($row = $stat->fetch_assoc()) {
+        $exists = true;
+        break;
+      }
+
+      if($exists){
+        if($new == $new2){
+          $pass = md5($new);
+          $stat = $connection->query("update user set password = '$pass' where username='$user'");
+        }else{
+          header("Location: cosc360.ok.ubc.ca/33354144/noMatch.php");
+        }
+      }else{
+        header("Location: cosc360.ok.ubc.ca/33354144/badPass.php");
+      }
+
+      $stat->close();
+
 		}
 	}
 
