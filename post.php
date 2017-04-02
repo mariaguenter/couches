@@ -106,7 +106,7 @@ echo"
 		  //show all comments on the post
 		  
 	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
-    $stat = $connection->prepare($sql2);
+    $stat = $connection->query($sql2);
     $stat->execute();
     $res = $stat->get_result();
 
