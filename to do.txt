@@ -9,8 +9,10 @@ Delete them as you finish
 DELIVERABLE 2
 --------------
 * new comment
+* find all with prepared stats
+
 * take out comments on files before handing in lol
-* preliminary summary document, indicating implememnted functionality ***users exact, post ittle not
+* preliminary summary document, indicating implememnted functionality ***users exact, post title not
 
 DELIVERABLE 3
 --------------
@@ -18,7 +20,6 @@ DELIVERABLE 3
 ^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
 *^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
 * click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
-^ make comments collapsable? (If mat knows how to do this)
 * make footer go to bottom when small page
 styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; javascript buttons)
 ^ processContact.php - make it send an email (kitty.threads.contact@gmail.com passpass)
@@ -26,7 +27,8 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 * ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
 * admin search by email
 * stop ozzy from being stretched
-*max weidth and height post images
+* max weidth and height post images
+* delete posts if person deleted??
 
 * summary of features implemented (maria)
 * 6 page report stuff (maria)

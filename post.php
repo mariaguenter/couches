@@ -103,16 +103,17 @@ echo"
 echo" 
 		<div>
 		<p>" . $content . "</p>
-		</div>";
+		</div>
+		<h2>Comments:</h2>";
 
 		  //show all comments on the post
 		  
-	$sql2 = "SELECT * FROM comments WHERE postid = $id";
-    $stat = $connection->prepare($sql2);
-    $stat->execute();
-    $res = $stat->get_result();
 
-	while($row = $res->fetch_assoc()){
+	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
+    $stat = $connection->query($sql2);
+    
+	while($row = $stat->fetch_assoc()){
+
 		$commentAuthor = htmlspecialchars($row['author']);
 		$commentContent = $row['content'];
 		
