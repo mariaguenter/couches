@@ -45,8 +45,6 @@
 				$stat->close();
 				}
 
-				//code on how to get the image (MAT??)
-
 				$connection->close();
 
 			}
@@ -61,7 +59,7 @@
 			adminPriv: $adminPriv
 		</fieldset>";
 		
-		//echo '<img src=""/>';   NEED TO CHANGE THIS
+	
 		
 		if($exists == True){
 		?>	

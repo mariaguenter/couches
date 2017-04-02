@@ -36,8 +36,7 @@ DELIVERABLE 2
 ^ finish post.php (idk how to make it so when you click the title of a post, it takes you to a seperate page jsut for that post, like how to link it and stuff. also once in the post.php page i have no idea how to write the query for it)
 ^ edit newUser.php to store the photo they upload
 ^ edit newPost.php to store the photo they upload. also make link at the end take you to the post page but idk what the link would be for that
-^ edit processSearchUser page to add functionallity of retrieving photo and displaying it (its can be hella ugly its ok, its just the admin page) 
-^ edit processSearchPost page to add functionallity of retrieving photo and displaying it(its can be hella ugly its ok, its just the admin page) 
+
 ^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database. also edit so that it redirects you to the post page for that post
 ^ edit processChangePic.php to update picture
 ^ make links on post page and home page to link to author's profile page (i have no idea how to make links for different users' profiles)
