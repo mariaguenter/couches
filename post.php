@@ -107,10 +107,8 @@ echo"
 		  
 	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
     $stat = $connection->query($sql2);
-    $stat->execute();
-    $res = $stat->get_result();
-
-	while($row = $res->fetch_assoc()){
+    
+	while($row = $stat->fetch_assoc()){
 		$commentAuthor = htmlspecialchars($row['author']);
 		$commentContent = $row['content'];
 		
