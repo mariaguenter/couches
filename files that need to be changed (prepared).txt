@@ -1,0 +1,21 @@
+files that have prepared statments
+
+
+
+deletePost (done) 
+deleteUser (done)
+enableUser (done)
+emailRecovery2 (line 21)
+enableUser (done)
+home (done)
+newComment (line 11)
+newPost (line 18)
+newUser (line 34, and more lol)
+post
+processChangeName
+processChangePass
+processLogin
+processSearchPost (done)
+processSearchUser (done)
+profile
+

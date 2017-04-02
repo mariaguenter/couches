@@ -103,7 +103,8 @@ echo"
 echo" 
 		<div>
 		<p>" . $content . "</p>
-		</div>";
+		</div>
+		<h2>Comments:</h2>";
 
 		  //show all comments on the post
 		  
