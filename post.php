@@ -73,19 +73,18 @@
     $date = $row['postDate'];
     $pic = htmlspecialchars($row['pic']);
     $content = htmlentities($row['content']);
-   
-    $count = 0;
+
     if ($category == 1){
-      $category = "health and nutrition";
+      $category_name = "health and nutrition";
     }else if($category == 2){
-      $category = "behaviour";
+      $category_name = "behaviour";
     }else if($category == 3){
-      $category = "funny stories";
+      $category_name = "funny stories";
     }
   }
 
   //need to dispaly navigation along the top
-  echo"<h5><a href = \"home.php\">Home</a> -> <a href = \"home.php?category=$category\">" . $category . "</a> -> " . $title . "</h5>"; //make h5 really small,also make # become a link to category page of the home page
+  echo"<h5><a href = \"home.php\">Home</a> -> <a href = \"home.php?category=$category\">" . $category_name . "</a> -> " . $title . "</h5>"; //make h5 really small,also make # become a link to category page of the home page
 
 
 
@@ -97,15 +96,18 @@ echo"
             <div>
               <h2>" . $title . "</h2>
               <p><a href=\"profile.php?user=$author\">" . $author . "</a>    |       " .  $date . "</p>  <!--LINK TO AUTHORS PROFILE?? HOWWWW-->
-			  <p class=\"comments\">" . $count . "comments</p>
             </div>
 			<div class=\"clearfix\"></div>
           </div>";
-		  
+
+echo" 
+		<div>
+		<p>" . $content . "</p>
+		</div>";
 
 		  //show all comments on the post
 		  
-	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
+	$sql2 = "SELECT * FROM comments WHERE postid = $id";
     $stat = $connection->prepare($sql2);
     $stat->execute();
     $res = $stat->get_result();
@@ -115,19 +117,13 @@ echo"
 		$commentContent = $row['content'];
 		
 		echo "
-			<p>" . $commentAuthor ."</p>
-			<p>" . $content . "</p>
+			<p><a href='/profile.php?user=$commentAuthor'>$commentAuthor</a></p>
+			<p>" . $commentContent . "</p>
 			<br>
-		"
+		";
 			
-	} 
+	}
 
-echo" 
-		<div>
-		<p>" . $content . "</p>
-		</div>";
-		
-		
 	if (!empty($_SESSION['username'])) { ?>
 	
 	
