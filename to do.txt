@@ -22,7 +22,6 @@ DELIVERABLE 2
 ^ edit processChangePic.php to update picture
 
 
-* .error
 * take out comments on files before handing in lol
 * preliminary summary document, indicating implememnted functionality ***users exact, post title not
 
