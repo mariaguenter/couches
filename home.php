@@ -4,6 +4,49 @@
   }
 
   $title = "Home";
+
+  if (isset($_GET['category'])) {
+    $category = htmlspecialchars($_GET['category']);
+  }
+  else {
+    $category = "new";
+  }
+
+  $order = 'post.postDate';
+  $where = '';
+
+  switch ($category) {
+    case 'top':
+      $order = "post.rating";
+      $crumb = "Top Rated";
+      break;
+    case 1:
+      $where = " WHERE post.category = 1 ";
+      $crumb = "Health and Nutrition";
+      break;
+    case 2:
+      $where = " WHERE post.category = 2 ";
+      $crumb = "Behaviour";
+      break;
+    case 3:
+      $where = " WHERE post.category = 3 ";
+      $crumb = "Funny Stories";
+      break;
+    default:
+      $crumb = "Newest";
+  }
+
+  if (isset($_GET['search'])) {
+    $term = htmlspecialchars($_GET['search']);
+
+    if (!empty($where)) {
+      $where .= "AND post.title LIKE '%$term%' ";
+    }
+    else {
+      $where = " WHERE post.title LIKE '%$term%' ";
+    }
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +64,11 @@
     <div id="main" class="grid-row">
       <article id="left-sidebar" class="col-1">
         <ul id="post-types">
-          <li><a href="#">top</a></li> <!-- change what is displayed, change the query i guess? I have no clu. Need to make the links work -->
-          <li><a href="#">new</a></li> <!-- this is the default -->
-          <li><a href="#">health and nutrition</a></li>
-          <li><a href="#">behaviour</a></li>
-          <li><a href="#">funny stories</a></li>
+          <li><a href="home.php?category=top">top</a></li>
+          <li><a href="home.php?category=new">new</a></li>
+          <li><a href="home.php?category=1">health and nutrition</a></li>
+          <li><a href="home.php?category=2">behaviour</a></li>
+          <li><a href="home.php?category=3">funny stories</a></li>
         </ul>
 
       </article>
@@ -39,10 +82,11 @@
         </div>
 
         <article id="center">
+          <h1><?php print $crumb; ?></h1>
 		
 		<!-- defauly is just to disply newest (say limit top 20) -->
 		<?php
-		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by post.postDate DESC, post.rating DESC")) {
+		if($stat = $connection->prepare("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid $where group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by $order DESC, post.rating DESC")) {
 			$stat->execute();
 			$res = $stat->get_result();
 			
@@ -98,9 +142,6 @@
 
             <input type="submit"/>
           </form>
-        </div>
-        <div class="side-bar-login-form">
-
         </div>
 
         <?php } else { ?>

@@ -32,8 +32,18 @@
 
 				// Check if file already exists
 				if (file_exists($target_file)) {
-					$error = "File already exists.";
-					$uploadOk = 0;
+					$base_name = str_replace(".$imageFileType", '', $_FILES['np-image']['name']);
+					$i = 0;
+
+					while (true) {
+						$target_file = $target_dir . $base_name . "_$i.$imageFileType";
+
+						if (!file_exists($target_file)) {
+							break;
+						}
+
+						$i++;
+					}
 				}
 				// Check file size
 				if ($_FILES["np-image"]["size"] > 2048000) {

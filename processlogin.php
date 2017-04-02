@@ -25,7 +25,7 @@
         while ($row = $res->fetch_assoc()) {
           $exists = TRUE;
           $_SESSION['username'] = $user;
-          $admin = $row->adminPriv;
+          $admin = $row['adminPriv'];
           if ($admin == TRUE){
             $_SESSION['admin'] = $admin;
           }

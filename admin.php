@@ -1,4 +1,8 @@
 <?php
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
   $title = "Admin Controls";
   if (empty($_SESSION['admin'])) {
     header("Location: index.php");
