@@ -56,18 +56,20 @@
 					</fieldset>
 					";
 					
-					//echo '<img src=""/>';   NEED TO CHANGE THIS
-					echo "<br><br>";
+		
+				
 			
 					$GLOBALS['postid'] = $postid;
 					?>	
 					<form method = "post" action = "deletePost.php" id="deltePost" >
 						<input type = "submit" value = "Delete Post" > 
 					</form>
-						
+
+					
 
 				<?php		
 					
+					echo "<br><br>";
 				}
 				$stat->close();
 				}
