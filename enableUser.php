@@ -3,7 +3,7 @@
 
 	require 'connection.php';
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-				$user = $GLOBAL['user'];
+				$user = $_POST['user'];
 				if($stat = $connection->prepare("update user set adminPriv = true where username = ?")){ 
 				$stat->bind_param("s", $user);
 				$stat->execute();

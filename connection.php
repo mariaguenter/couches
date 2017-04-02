@@ -7,7 +7,7 @@
     $host = "localhost";
     $database = "lab8";
     $user = "root";
-    $password = "";
+    $password = "cats";
   }
   else {
     $host = "localhost";

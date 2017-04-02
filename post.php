@@ -73,7 +73,7 @@
     $date = $row['postDate'];
     $pic = htmlspecialchars($row['pic']);
     $content = htmlentities($row['content']);
-    //$comments = $row[];
+   
     $count = 0;
     if ($category == 1){
       $category = "health and nutrition";
@@ -99,13 +99,51 @@ echo"
               <p><a href=\"profile.php?user=$author\">" . $author . "</a>    |       " .  $date . "</p>  <!--LINK TO AUTHORS PROFILE?? HOWWWW-->
 			  <p class=\"comments\">" . $count . "comments</p>
             </div>
+			<div class=\"clearfix\"></div>
           </div>";
 		  
-		  //add code to display the content of the post, doesnt have to look good yolo
-		  //show all comments on the post, and add comment box (that will use newComment.php) ONLY IF THEY ARE LOGGED IN
 
+		  //show all comments on the post
+		  
+	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
+    $stat = $connection->prepare($sql2);
+    $stat->execute();
+    $res = $stat->get_result();
 
+	while($row = $res->fetch_assoc()){
+		$commentAuthor = htmlspecialchars($row['author']);
+		$commentContent = $row['content'];
+		
+		echo "
+			<p>" . $commentAuthor ."</p>
+			<p>" . $content . "</p>
+			<br>
+		"
+			
+	} 
 
+echo" 
+		<div>
+		<p>" . $content . "</p>
+		</div>";
+		
+		
+	if (!empty($_SESSION['username'])) { ?>
+	
+	
+	<form method = "post" action = "newComment.php">
+		<textarea id="comment" name="comment" placeholder="max 500 characters" maxlength = "500"  required></textarea>
+		<input type = "hidden" name = "id" value = <?php print $id; ?> >
+		<input type = "hidden" name = "username" value = <?php print $_SESSION['username']; ?> >
+		<input type="submit">
+	</form>
+	
+	
+	
+	<?php } ?>
+	
+	
+<?php
   require 'inc/footer.inc.php';
 ?>
 

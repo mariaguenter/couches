@@ -4,7 +4,7 @@
 
 	require 'connection.php';
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-				$user = $GLOBAL['user'];
+				$user = $_POST['user'];
 				if($stat = $connection->prepare("delete from user where username = ?")){ 
 				$stat->bind_param("s", $user);
 				$stat->execute();

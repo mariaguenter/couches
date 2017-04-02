@@ -98,7 +98,7 @@
 				$post_title = htmlentities($row['title']);
 				$numComments = empty($row['numCom']) ? 0 : $row['numCom'];
 				echo"
-				  <div class=\"entry\"><!-- eventually add thumbs up feature-->
+				  <div class=\"entry\">
 					<figure>
 					  <img src=\"$postPic\" alt=\"Post Picture\" /> 
 					</figure>
@@ -107,6 +107,7 @@
 					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
 					  <p class=\"comments\">" . $numComments . "comments</p>
 					</div>
+					<div class=\"clearfix\"></div>
 				  </div>";
 			}
 		}
@@ -127,7 +128,7 @@
             </div>
             <div class="form-row">
               <label for="np-content" class="top">Content: </label>
-              <textarea id="np-content" name="np-content" placeholder="max 800 characters" maxlength = "900"  required></textarea>
+              <textarea id="np-content" name="np-content" placeholder="max 800 characters" maxlength = "800"  required></textarea>
             </div>
             <div class="form-row">
               <label for="np-category" class="top">Category: </label>
