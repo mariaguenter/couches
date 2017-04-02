@@ -9,7 +9,7 @@ if (!isset($_SESSION)) {
       $profile_pic = "images/public/" . $_FILES['profilePic']['name'];
 			$user = $_SESSION['username'];
 			
-			//magic to change the profile picture
+			//change the profile picture
       $target_dir = "images/public/";
       $target_file = $target_dir . basename($_FILES["profilePic"]["name"]);
       $uploadOk = 1;
@@ -69,4 +69,4 @@ if (!isset($_SESSION)) {
 	}	
 	
 	
-	header("Location: profile.php");
+	header("Location: cosc360.ok.ubc.ca/33354144/profile.php");

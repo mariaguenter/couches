@@ -1,8 +1,8 @@
 <?php
 
-// We don't won't to allow just anybody to have access to this page.  So we set
+//  don't won't to allow just anybody to have access to this page.  So we set
 // a manual flag for access, or check to see if the accessor is an admin.
-$update_access = TRUE; // REMEMBER  set true when testing, make sure to set false on hand in!
+$update_access = FALSE; // REMEMBER  set true when testing, make sure to set false on hand in!
 
 if (empty($_SESSION)) {
   session_start();

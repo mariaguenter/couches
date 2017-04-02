@@ -69,12 +69,12 @@
           $stat = $connection->query($sql);
           $post_id = $stat->insert_id;
         } else {
-          header("Location: home.php");
+          header("Location: cosc360.ok.ubc.ca/33354144/home.php");
         }
       }
 
 		}
 
 		$connection->close();
-		header("Location: post.php?id=$post_id"); //take to page for that post, idk what the link is for this tho
+		header("Location: cosc360.ok.ubc.ca/33354144/post.php?id=$post_id"); //take to page for that post
 	}

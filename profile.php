@@ -6,7 +6,7 @@
   $title = "Profile";
 
   if (empty($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: cosc360.ok.ubc.ca/33354144/login.php");
   }
 ?>
 

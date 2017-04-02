@@ -11,7 +11,7 @@
       $connection->query("insert into comments(content, author, postid) values ($content,$username,$postid)");
 
 			$connection->close();
-			header("Location: post.php?id=$postid");
+			header("Location: cosc360.ok.ubc.ca/33354144/post.php?id=$postid");
 		}
 	}
 

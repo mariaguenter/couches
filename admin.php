@@ -16,7 +16,7 @@
   <body>
     <?php require 'inc/header.inc.php'; ?>
 
-    <!--search users/enable or disable users/ edit/remove psots or users-->
+    <!--search users/enable or disable users and remove psots or users-->
     <form method="post" action="processSearchUser.php" id="mainForm" >
       Search User:<br> <!--will display all users information from the table like lab9 then have enable/disable/delete buttons-->
       <input type="text" name="username" id="username" class="required">

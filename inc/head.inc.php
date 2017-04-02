@@ -1,6 +1,6 @@
 <?php
   if (!isset($title)) {
-    header("Location: index.php");
+    header("Location: cosc360.ok.ubc.ca/33354144/index.php");
   }
 ?>
 

@@ -17,7 +17,7 @@ $(document).ready(function() {
     $(this).after(markup);
   });
 
-  // We need to append click listeners to the file replacement buttons.  Since
+  // need to append click listeners to the file replacement buttons.  Since
   // they get attached to the dom after the fact, we listen for events that
   // bubble up to the body and check their source ('.input-file-button')
   $('body').on('click', '.input-file-button', function(e) {

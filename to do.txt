@@ -11,9 +11,6 @@ DELIVERABLE 2
 
 
 
-* take out comments on files before handing in lol
-* preliminary summary document, indicating implememnted functionality ***users exact, post title not
-
 DELIVERABLE 3
 --------------
 ^ (not super importnat aka DO NOT DO UNLESS FREE TIME) make the category labels line up with the buttons nicely (I tried and gave up)
