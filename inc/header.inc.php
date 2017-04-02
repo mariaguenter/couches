@@ -22,7 +22,7 @@
 
   <!--Logged in and admin -->
   <header id="header">
-    <a href = "home.html">
+    <a href = "home.php">
       <img id="logo" src="images/logo.png" alt="Kitty Threads" />
     </a>
     <nav>
@@ -41,7 +41,7 @@
 
   <!--Logged in -->
   <header id="header">
-    <a href = "home.html">
+    <a href = "home.php">
       <img id="logo" src="images/logo.png" alt="Kitty Threads" />
     </a>
     <nav>

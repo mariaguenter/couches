@@ -34,20 +34,60 @@ $(document).ready(function() {
 
   $('form').on('submit', function(e) {
     var valid = true;
+    var error = '';
 
     $('input', $(this)).each(function() {
       if ($(this).attr('type') !== 'submit') {
         if ($(this).val() === '' || $(this).val() === null) {
           valid = false;
+          error = "All fields must be filled.";
+        }
+
+        if ($(this).hasClass('error')) {
+          valid = false;
+          error = "All errors must be resolved.";
         }
       }
     });
 
     if (!valid) {
-      alert("All fields must be filled.");
+      alert(error);
       return false;
     }
 
+  });
+
+  $('input[name="newpassword"], #createAccountForm input[name="password"]').on('keyup', function(e) {
+    // Valid password regex testers
+    var pass_strength = /((?=.*\d)(?=.*[a-z]).{7,15})/gm;
+
+    var current_val = $(this).val();
+
+    if (!pass_strength.test(current_val)) {
+      $(this).addClass('error');
+    }
+    else {
+      $(this).removeClass('error');
+
+      if (current_val === $('input[name="confirmPassword"]').val()) {
+        $('input[name="confirmPassword"]').removeClass('error');
+      }
+      else {
+        $('input[name="confirmPassword"]').addClass('error');
+      }
+    }
+  });
+
+  $('input[name="confirmPassword"]').on('keyup', function(e) {
+    var confirmation_pass = $(this).val();
+    var main_pass = $('input[name="newpassword"]').val() || $('#createAccountForm input[name="password"]').val();
+
+    if (confirmation_pass !== main_pass) {
+      $(this).addClass('error');
+    }
+    else {
+      $(this).removeClass('error');
+    }
   });
 
 });

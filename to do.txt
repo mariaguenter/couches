@@ -8,18 +8,7 @@ Delete them as you finish
 
 DELIVERABLE 2
 --------------
-^ validation on all forms! make things turn red and alert user if something is bad
-	Create Account
-		-reg exp for passwords: 7-15 characters, atleast one number
-		-password and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
-	Edit Profile
-		-picture actually image
-		-old password is correct (I have php to do this, if we have time make javascript to make it fancier)
-		-new password is 7-15 chars, atleast one number
-		-passwrod and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
 
-
-^ edit processChangePic.php to update picture
 
 
 * take out comments on files before handing in lol

@@ -59,13 +59,9 @@
   else{
     require 'connection.php';
 
-    $sql = "SELECT * FROM post WHERE postid = ?";
-    $stat = $connection->prepare($sql);
-    $stat->bind_param('i', $id);
-    $stat->execute();
-    $res = $stat->get_result();
-
-    $row = $res->fetch_assoc();
+    $sql = "SELECT * FROM post WHERE postid = $id";
+    $stat = $connection->query($sql);
+    $row = $stat->fetch_assoc();
 
     $category = $row['category'];
     $title  = htmlspecialchars($row['title']);
@@ -110,7 +106,7 @@ echo"
 		  
 
 	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
-    $stat = $connection->query($sql2);
+  $stat = $connection->query($sql2);
     
 	while($row = $stat->fetch_assoc()){
 
