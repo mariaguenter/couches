@@ -9,11 +9,11 @@
   }
 
 	require 'connection.php';
-		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-      $user = $_POST['user'];
-      if($stat = $connection->query("update user set adminPriv = true where username = '$user'")){
-				header('Location: /admin.php');
-      }
-				
-				$connection->close();
-		}
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $user = $_POST['user'];
+    if($stat = $connection->query("update user set adminPriv = true where username = '$user'")){
+      header('Location: /admin.php');
+    }
+      $connection->close();
+  }

@@ -79,6 +79,7 @@
 						<p>" . $date . "</p>
 						<p class=\"comments\">" . $numComments . " $comment</p>
 					  </div>
+					  <div class=\"clearfix\"></div>
 					</div>
 				 
 				";

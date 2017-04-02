@@ -21,8 +21,10 @@ DELIVERABLE 2
 ^ edit newComment.php to get postid from the page you are currently on, cause we need to be able to store this in the database. also edit so that it redirects you to the post page for that post
 ^ edit processChangePic.php to update picture
 
+
+* new comment
 * take out comments on files before handing in lol
-* preliminary summary document, indicating implememnted functionality (maria)
+* preliminary summary document, indicating implememnted functionality ***users exact, post ittle not
 
 DELIVERABLE 3
 --------------
@@ -37,6 +39,8 @@ styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; 
 ^ finish forgot my password link (idk how this will work with the email recovery witch craft)
 * ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
 * admin search by email
+* stop ozzy from being stretched
+*max weidth and height post images
 
 * summary of features implemented (maria)
 * 6 page report stuff (maria)

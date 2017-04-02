@@ -5,10 +5,10 @@
 	require 'connection.php';
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		if (isset($_POST['np-title']) && isset($_POST['np-content'])  && isset($_POST['category'])  && isset($_POST['np-image']) ) { //dont know if catgory name thing is correct
+		if (isset($_POST['comment'])) { 
 			$content = $_POST['comment'];
-			$postid = //somehow get this?!?!?
-			$username = $_SESSION['username']; 
+			$postid = $_POST['id'];
+			$username = $_POST['username']; 
 				
 			
 
@@ -23,7 +23,7 @@
 					
 			
 			$connection->close();
-			header("Location: cosc360.ok.ubc.ca/33354144/") //take to page for that post, idk what the link is for this tho
+			header("Location: post.php?id=$postid") 
 		}
 	}
 	

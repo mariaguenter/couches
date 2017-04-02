@@ -13,8 +13,8 @@
 	require 'connection.php';
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
       $user = $_POST['user'];
-      if($stat = $connection->query("delete from user where username = '$user'")){
 
+      if($stat = $connection->query("delete from user where username = '$user'")){
 				header('Location: /admin.php');
       }
 				
