@@ -13,13 +13,11 @@ DELIVERABLE 2
 		-reg exp for passwords: 7-15 characters, atleast one number
 		-password and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
 	Edit Profile
-		-picture actualy image
-		-email has @ .
+		-picture actually image
 		-old password is correct (I have php to do this, if we have time make javascript to make it fancier)
 		-new password is 7-15 chars, atleast one number
 		-passwrod and confirm password the same (I have php to do this, if we have time make javascript to make it fancier)
-	Contact us
-		-email . @ 
+
 
 ^ edit processChangePic.php to update picture
 

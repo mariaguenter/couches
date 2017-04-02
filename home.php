@@ -86,7 +86,7 @@
 		
 		<!-- defauly is just to disply newest (say limit top 20) -->
 		<?php
-		if($stat = $connection->query("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, sum(comid) as numCom from post left join comments on post.postid = comments.postid $where group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by $order DESC, post.rating DESC")) {
+		if($stat = $connection->query("select post.postid, post.postDate, post.author, post.pic, post.title, post.rating, count(comid) as numCom from post left join comments on post.postid = comments.postid $where group by post.postid, post.postDate, post.author, post.pic, post.title, post.rating order by $order DESC, post.rating DESC")) {
 			//if(!$stat->execute())(die($stat->error));
 			$res = $stat;//->get_result();
 			
@@ -103,7 +103,7 @@
 					  <img src=\"$postPic\" alt=\"Post Picture\" /> 
 					</figure>
 					<div>
-					  <h2 id = \"first\"><a href =\"post.php/id=$post_id\">" . $post_title . "</a></h2>
+					  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
 					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
 					  <p class=\"comments\">" . $numComments . "comments</p>
 					</div>
