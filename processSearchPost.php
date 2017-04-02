@@ -1,4 +1,8 @@
 <?php
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
   $title = "Search Posts";
   if (empty($_SESSION['admin'])) {
     header("Location: cosc360.ok.ubc.ca/33354144/home.php"); 
@@ -22,63 +26,51 @@
 		$count = 0;
 		$content =  "Not Found";
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-			if (isset($_POST['username'])) {
-				$title = $_POST['postTitle'];
-
+			if (isset($_POST['postTitle'])) {
+				$title = htmlentities($_POST['postTitle']);
+        $safe_title = $connection->real_escape_string($title);
 				
-				if($stat = $connection->prepare("select post.postid, postDate, post.author, category, rating, title, post.content, count(comid) as numCom from post, comments where title like ? and post.postid = comments.postid group by post.postid, postDate, post.author, category, rating, title, post.content")){ 
-				$title2 = "%".$title."%"; //NO IDEA IF THIS WORKS LOLOLOLOL
-				$stat->bind_param("s", $title2);
-				$stat->execute();
-				$res = $stat->get_result();
-				
-			
-				while ($row = $res->fetch_object()) { //prints out all posts that the search returns lolol this may be a bad idea
-					$exists = True;
-					$postid = $row->postid;
-					$postDate = $row->postDate;
-					$author = $row->author;
-					$category = $row->category;
-					$rating = $row->rating;
-					$count = $row->numCom;
-					$content = $row->content;	
-					//code on how to get the image (MAT??)					
-					echo "
-					<fieldset>
-						<legend>Title: $title </legend>
-						Post ID: $postid <br>
-						Post Date: $postDate <br>
-						Author: $author <br>
-						Content: $content <br>
-						Category: $category <br>
-						Rating: $rating <br>
-						Number of Comments: $numCom <br>
-					</fieldset>
-					";
-					
-		
-				
-			
-					$GLOBALS['postid'] = $postid;
-					?>	
-					<form method = "post" action = "deletePost.php" id="deltePost" >
-						<input type = "submit" value = "Delete Post" > 
-					</form>
+				if ($stat = $connection->query("select post.postid, postDate, post.author, category, rating, title, post.content from post left join comments on post.postid = comments.postid where title like '%$safe_title%'")){
+          while ($row = $stat->fetch_object()) {
+            if ($row->postid == NULL) {
+              continue;
+            }
+            $exists = True;
+            $postid = $row->postid;
+            $postDate = $row->postDate;
+            $author = htmlspecialchars($row->author);
+            $category = $row->category;
+            $rating = $row->rating;
+            $title = htmlspecialchars($row->title);
+            $content = htmlspecialchars($row->content);
+            echo "
+            <fieldset>
+              <legend>Title: $title </legend>
+              Post ID: $postid <br>
+              Post Date: $postDate <br>
+              Author: $author <br>
+              Content: $content <br>
+              Category: $category <br>
+              Rating: $rating <br>
+            </fieldset>
+            ";
 
-					
+            ?>
+            <form method = "post" action = "deletePost.php" id="deletePost" >
+              <input type = "submit" value = "Delete Post" >
+              <input type="hidden" name="postid" value="<?php print $postid; ?>">
+            </form>
 
-				<?php		
-					
-					echo "<br><br>";
+          <?php
+
+            echo "<br><br>";
+          }
 				}
-				$stat->close();
-				}
-				while(!$exists){
+
+				if (!$exists) {
 					echo"<h1>no results</h1>";
 					echo"<p><a href =\"admin.php\">return</a></p>";
 				}
-
-			
 
 				$connection->close();
 
