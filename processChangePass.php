@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+
 	require 'connection.php';
 	$exists = false;
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -37,14 +41,8 @@
 				}
 			
 				$stat->close();
-				
 			}
-			
-			
-			
-		
 		}
-	}	
-	
-	
-	header("Location: cosc360.ok.ubc.ca/33354144/profile.php"); 
+	}
+
+	header("Location: cosc360.ok.ubc.ca/33354144/profile.php");

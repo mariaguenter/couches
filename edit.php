@@ -1,4 +1,8 @@
 <?php
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
   $title = "Edit Profile";
   if (empty($_SESSION['username'])){
     header("Location: cosc360.ok.ubc.ca/33354144/login.php"); 
@@ -22,7 +26,7 @@
       </p>
       <input type = "submit" value = "submit"/>
     </form>
-    <form action="processChangePasswrod.php" method = "post" id = "createAccountForm">
+    <form action="processChangePassword.php" method = "post" id = "createAccountForm">
       <h1>change password</h1>
         <label class = "contactFields">old password:</label>
         <input type="password" name="oldpassword" maxlength = "15" required />
@@ -35,7 +39,7 @@
 		<br>
       <input type = "submit" value="submit"/>
     </form>
-    <form action="processChangePic.php" method = "post" id = "createAccountForm">
+    <form action="processChangePic.php" method = "post" id = "createAccountForm" enctype="multipart/form-data">
       <h1>change profile picture</h1>
       <p>
         <label class = "contactFields">picture:</label>

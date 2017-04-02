@@ -1,5 +1,10 @@
 <?php
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
 	require 'connection.php';
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if (isset($_POST['fname']) && isset($_POST['lname'])) {
 			$fname = $_POST['fname'];
@@ -14,6 +19,5 @@
 			$stat->close();
 		}
 	}	
-	
-	
-	header("Location: cosc360.ok.ubc.ca/33354144/profile.php"); 
+
+	header("Location: cosc360.ok.ubc.ca/33354144/profile.php");

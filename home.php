@@ -105,7 +105,7 @@
 					<div>
 					  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
 					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
-					  <p class=\"comments\">" . $numComments . "comments</p>
+					  <p class=\"comments\">" . $numComments . " comments</p>
 					</div>
 					<div class=\"clearfix\"></div>
 				  </div>";
