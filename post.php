@@ -80,13 +80,13 @@
   }
 
   //need to dispaly navigation along the top
-  echo"<h5><a href = \"home.php\">Home</a> -> <a href = \"home.php?category=$category\">" . $category_name . "</a> -> " . $title . "</h5>"; //make h5 really small,also make # become a link to category page of the home page
+  echo"<h5><a href = \"home.php\">home</a> -> <a href = \"home.php?category=$category\">" . $category_name . "</a> -> " . $title . "</h5>"; //make h5 really small,also make # become a link to category page of the home page
 
 
 
 echo"
           <div class=\"entry\">
-            <figure>
+            <figure class = \"postPic\">
               <img src=\" " . $pic . "\" alt=\" " . $title . "\" />
             </figure>
             <div>

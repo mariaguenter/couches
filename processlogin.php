@@ -19,7 +19,7 @@
       $pass2 = md5($pass);
       $stat = $connection->query("select * from user where username = '$user' and pass = '$pass2'");
 
-      while ($row = $res->fetch_assoc()) {
+      while ($row = $stat->fetch_assoc()) {
         $exists = TRUE;
         $_SESSION['username'] = $user;
         $admin = $row['adminPriv'];

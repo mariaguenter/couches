@@ -99,7 +99,7 @@
 				$numComments = empty($row['numCom']) ? 0 : $row['numCom'];
 				echo"
 				  <div class=\"entry\">
-					<figure>
+					<figure class = \"postPic\">
 					  <img src=\"$postPic\" alt=\"Post Picture\" /> 
 					</figure>
 					<div>

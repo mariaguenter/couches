@@ -11,7 +11,7 @@
 	
 	
 	      <form action="emailRecovery2.php" method = "post" id = "emailRecov">
-          <legend>email password recovery</legend>
+          <legend>password recovery</legend>
           <p>
             <label class = "contactFields">username:</label>
             <input type="text" name="username" required />

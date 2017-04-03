@@ -11,7 +11,7 @@
 			$lname = $connection->real_escape_string($_POST['lname']);
 			$user = $connection->real_escape_string($_SESSION['username']);
 
-      $connection->query("update user set fname = '$fname' and lname = '$lname' where username='$user'");
+			$connection->query("update user set fname = '$fname' and lname = '$lname' where username='$user'");
 		}
 	}	
 

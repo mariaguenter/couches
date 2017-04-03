@@ -65,11 +65,11 @@
       $comment = $numComments == 1 ? "comment" : "comments";
       echo"
         <div class=\"postEntry\">
-          <figure>
-          <img src=\"$postPic\" alt=\"\" />  <!--PICTURE MAGIC -->
+          <figure class = \"postPic\">
+          <img src=\"$postPic\" alt=\"Post Picture\"  />  
           </figure>
           <div>
-          <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $title . "</a></h2> <!--LINK TO POST PAGE NOT SURE HOW TO DO YET -->
+          <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $title . "</a></h2> 
           <p>" . $date . "</p>
           <p class=\"comments\">" . $numComments . " $comment</p>
           </div>

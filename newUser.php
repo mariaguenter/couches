@@ -107,6 +107,6 @@
 			}
       
 			$connection->close();
-			header('Location: cosc360.ok.ubc.ca/33354144/profile.php');
+			header('Location: profile.php'); //this wasnt working??
 		}
 	}
