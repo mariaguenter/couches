@@ -7,16 +7,26 @@
   }
 
   if (empty($_SESSION['admin'])) {
-    header("Location: /home.php");
+    header("Location: home.php");
   }
 
 	require 'connection.php';
-		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-      $user = $_POST['user'];
-
-      if($stat = $connection->query("delete from user where username = '$user'")){
-				header('Location: /admin.php');
-      }
-				
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	  $user = $_POST['user'];
+	
+	  $query = "DELETE FROM comments WHERE postid in ("
+	    .        "SELECT postid FROM post WHERE author = '$user') "
+		.      "OR author = '$user'";
+	  if (!$stat = $connection->query($query)) {
+		  die($connection->error);
+	  }
+      if (!$stat=$connection->query("delete from post where author = '$user'")) {
+		die($connection->error);
+	  }
+	  if (!$stat = $connection->query("delete from user where username = '$user'")) {
+		  die($connection->error);
+	  }
+	  header('Location: admin.php');	
+     	
       $connection->close();
-		}
+	}

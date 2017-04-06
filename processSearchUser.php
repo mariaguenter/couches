@@ -5,7 +5,7 @@
 
   $title = "Search User";
   if (empty($_SESSION['admin'])) {
-    header("Location: cosc360.ok.ubc.ca/33354144/home.php"); 
+    header("Location: home.php"); 
   }
 ?>
 
@@ -31,7 +31,7 @@
 				if (isset($_POST['username'])) {
 					$user = $connection->real_escape_string(htmlspecialchars($_POST['username']));
 
-					if($stat = $connection->query("select username, fname, lname, email, adminPriv, count(postid) as numPosts from user left join post on user.username = post.author where username='$user'")){
+					if($stat = $connection->query("select username, fname, lname, email, adminPriv from user where username='$user' or email = '$user'")){
 
 						while ($row = $stat->fetch_object()) {
 							if ($row->fname == NULL) {
@@ -42,7 +42,7 @@
 							$lname = $row->lname;
 							$email = $row->email;
 							$adminPriv = $row->adminPriv;
-							$count = $row->numPosts;
+		
 							break;
 						}
 						$stat->close();
@@ -53,23 +53,24 @@
 			}
 
 			echo "
-			<fieldset>
-				<legend>User: $user </legend>
-				First Name: $fname <br>
-				Last Name: $lname <br>
-				Email: $email <br>
-				adminPriv: $adminPriv
-			</fieldset>";
+			<div id =\"Searchresults\">
+				<h7>User: &nbsp &nbsp $user <br>
+				First Name: &nbsp &nbsp $fname <br>
+				Last Name: &nbsp&nbsp $lname <br>
+				Email: &nbsp&nbsp $email <br>
+				adminPriv: &nbsp&nbsp $adminPriv </h7> <br>
+			</div>";
 
 
 
 			if ($exists == True) {
 		?>	
 
-			<form method = "post" action = "deleteUser.php" id="deleteUser" >
+			<form method = "post" action = "deleteUser.php" id="deleteUser" onsubmit="return confirm('Are you sure you want to delete this user?');" >
 				<input type = "submit" value = "Delete User" >
 				<input type="hidden" name="user" value="<?php print $user; ?>">
 			</form>
+			<br>
 			
 			<?php
 				if($adminPriv == True) { ?>
@@ -91,6 +92,7 @@
 				echo"<h1>no results</h1>";
 				echo"<p><a href =\"admin.php\">return</a></p>";
 			}
+			echo"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
   include ('inc/footer.inc.php');;
 ?>
 

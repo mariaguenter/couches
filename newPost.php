@@ -22,7 +22,7 @@
       $target_dir = "images/public/";
       $target_file = $target_dir . basename($_FILES["np-image"]["name"]);
       $uploadOk = 1;
-      $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+      $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
       // Check if image file is a actual image or fake image
       $check = getimagesize($_FILES["np-image"]["tmp_name"]);
@@ -49,12 +49,13 @@
         }
       }
       // Check file size
-      if ($_FILES["np-image"]["size"] > 2048000) {
+      if ($_FILES["np-image"]["size"] > 5048000) {
         $error = "File is too large.";
         $uploadOk = 0;
       }
       // Allow certain file formats
-      if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+	  $valid_mimes = array('jpg', 'png', 'jpeg', 'gif');
+      if(!in_array($imageFileType, $valid_mimes)) {
         $error = "File is the wrong mime (mimetype is $imageFileType).";
         $uploadOk = 0;
       }
@@ -69,12 +70,12 @@
           $stat = $connection->query($sql);
           $post_id = $stat->insert_id;
         } else {
-          header("Location: cosc360.ok.ubc.ca/33354144/home.php");
+          header("Location: home.php");
         }
       }
 
 		}
 
 		$connection->close();
-		header("Location: cosc360.ok.ubc.ca/33354144/post.php?id=$post_id"); //take to page for that post
+		header("Location: post.php?id=$post_id"); //take to page for that post
 	}

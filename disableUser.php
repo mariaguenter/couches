@@ -6,7 +6,7 @@
   }
 
   if (empty($_SESSION['admin'])) {
-    header("Location: /home.php");
+    header("Location: home.php");
   }
 
 	require 'connection.php';
@@ -14,7 +14,7 @@
     $user = $_POST['user'];
 
     if($stat = $connection->query("update user set adminPriv = false where username = '$user'")){
-      header('Location: /admin.php');
+      header('Location: admin.php');
     }
 
     $connection->close();

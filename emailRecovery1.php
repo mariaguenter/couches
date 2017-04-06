@@ -18,7 +18,8 @@
           </p>
           <input type = "submit" value="submit" required/>
         </form>
-	
+		<br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
 	
 	
 	    <?php include ('inc/footer.inc.php'); ?>

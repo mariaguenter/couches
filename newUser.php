@@ -36,15 +36,12 @@
 			
 			if ($stat = $connection->query("select * from user where username = '$safe_user' or email = '$safe_email'")) {
         while ($row = $stat->fetch_assoc()) {
-          $exists = true;
-          header('Location: cosc360.ok.ubc.ca/33354144/alreadyUser.php');
+          header('Location: alreadyUser.php');die();
           break;
         }
-
-			  $stat->close();
 			}
 			if ($pass != $confirmPass){
-				header('Location: cosc360.ok.ubc.ca/33354144/newUserNoMatch.php');
+				header('Location: newUserNoMatch.php');
 			}
 			
 			if ($exists == false) {
@@ -107,6 +104,6 @@
 			}
       
 			$connection->close();
-			header('Location: profile.php'); //this wasnt working??
+			header('Location: profile.php');
 		}
 	}

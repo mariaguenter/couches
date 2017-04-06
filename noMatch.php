@@ -9,13 +9,14 @@
 
     <?php include ('inc/header.inc.php'); 
 	  if (isset($_SESSSION['username'])) {
-		header('Location: cosc360.ok.ubc.ca/33354144/home.php'); 
+		header('Location: home.php'); 
 	  }
 
 	   echo"<h1>password and confirm password dont match</h1>";
 	   echo"<p><a href =\"edit.php\">return</a></p>";
 	?>
-	
+	<br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
 	
 	
 	

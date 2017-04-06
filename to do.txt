@@ -6,33 +6,24 @@ Legend:	* - Maria	^ - Mat		*^* - Both
 
 Delete them as you finish
 
-DELIVERABLE 2
---------------
-
 
 
 DELIVERABLE 3
 --------------
-^ (not super importnat aka DO NOT DO UNLESS FREE TIME) make the category labels line up with the buttons nicely (I tried and gave up)
-^ AJAX so if someone comments it is updated (mat CAUSE I HAVE NO IDEA)
-*^* add rating beside each post (maria/mat) - I can add the elements but not sure how to make them actual buttons that do stuff
-* click profile picture -> open bigger window (i have no idea, but  I guess I could google it... )
-* make footer go to bottom when small page
-styling flourishes?? (pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; javascript buttons)
-^ processContact.php - make it send an email (kitty.threads.contact@gmail.com passpass)
-^ finish forgot my password link (idk how this will work with the email recovery witch craft)
-* ? by password field that dispalys a pop up with password rules (7-15 characters, must have one number)
-* admin search by email
-* stop ozzy from being stretched
-* max weidth and height post images
-* delete posts if person deleted??
+
+^ processContact.php - make it send an email to kitty threads eamil (email: kitty.threads.contact@gmail.com password: passpass)
+^ finish forgot my password link (send an email with token n stuff...)
+
 
 * summary of features implemented (maria)
-* 6 page report stuff (maria)
-* 404 page change text
-* "are you sure" admin stuff
-* super easy admin reports
-* profile dispaly comments as well?
+* 6 page report stuff (styling flourishes -  pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; profile/post pic; javascript buttons; ? password)
+
+
+
+MAT BUGS
+JAVASCRIPT PASSWORDS
+password1
+
 
 
 

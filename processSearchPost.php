@@ -5,7 +5,7 @@
 
   $title = "Search Posts";
   if (empty($_SESSION['admin'])) {
-    header("Location: cosc360.ok.ubc.ca/33354144/home.php"); 
+    header("Location: home.php"); 
   }
 ?>
 
@@ -44,26 +44,27 @@
             $title = htmlspecialchars($row->title);
             $content = htmlspecialchars($row->content);
             echo "
-            <fieldset>
-              <legend>Title: $title </legend>
-              Post ID: $postid <br>
+			  <div id = \"Searchresults\">
+              <h7>Title: $title</h7> <br>  
+              <h7>Post ID: $postid <br>
               Post Date: $postDate <br>
               Author: $author <br>
               Content: $content <br>
               Category: $category <br>
-              Rating: $rating <br>
-            </fieldset>
+              Rating: $rating </h7>
+            
+			</div>
             ";
 
             ?>
-            <form method = "post" action = "deletePost.php" id="deletePost" >
+            <form method = "post" action = "deletePost.php" id="deletePost" onsubmit="return confirm('Are you sure you want to delete this post?');">
               <input type = "submit" value = "Delete Post" >
               <input type="hidden" name="postid" value="<?php print $postid; ?>">
             </form>
+			<br>
 
           <?php
 
-            echo "<br><br>";
           }
 				}
 
@@ -76,6 +77,7 @@
 
 			}
 		}
+		echo"<br><br><br><br>";
   include ('inc/footer.inc.php');
 ?>
 

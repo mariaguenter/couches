@@ -69,6 +69,10 @@
           <li><a href="home.php?category=1">health and nutrition</a></li>
           <li><a href="home.php?category=2">behaviour</a></li>
           <li><a href="home.php?category=3">funny stories</a></li>
+		  <div class=\"clearfix\"></div>
+		  <a href = "http://www.spca.bc.ca/"><img class = "ad" src="images/spcaad_lg.jpg" alt="advertisement" /></a>
+		  <a href = "https://www.dominos.ca/"><img class = "ad" src="images/domsad.jpg" alt="advertisement" /></a>
+		  <a href = "http://heyyallsoutherntea.com/"><img class = "ad" src="images/heyyallad.png" alt="advertisement" /></a>
         </ul>
 
       </article>
@@ -77,7 +81,7 @@
         <div id="searchBar">
           <form id="searchbox" action="">
             <input id="search" name="search" type="text" placeholder="search away">
-            <input type="submit">
+            <input type="submit" value = "Search">
           </form>
         </div>
 
@@ -91,21 +95,27 @@
 			$res = $stat;//->get_result();
 			
 			while($row = $res->fetch_assoc()){
-			  $post_id = $row['postid'];
+			    $post_id = $row['postid'];
 				$postPic = empty($row['pic']) ? 'images/blank.jpg' : $row['pic'];
 				$date = $row['postDate'];
 				$author = htmlspecialchars($row['author']);
 				$post_title = htmlentities($row['title']);
 				$numComments = empty($row['numCom']) ? 0 : $row['numCom'];
+				$rating = $row['rating'];
 				echo"
 				  <div class=\"entry\">
-					<figure class = \"postPic\">
-					  <img src=\"$postPic\" alt=\"Post Picture\" /> 
+					<figure>
+					  <a href =\"post.php?id=$post_id\"><img class = \"postPic\" src=\"$postPic\" alt=\"Post Picture\" /></a> 
 					</figure>
 					<div>
 					  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
 					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
 					  <p class=\"comments\">" . $numComments . " comments</p>
+					  <div id = \"ratings\">
+						<a  href = \"upRate.php?id=$post_id\"><img class = \"ratings1\" src=\"images/rateup.png\"  /></a>
+						<img class = \"ratings2\" src=\"images/rating.png\" />
+						<p>" . $rating . "</p>
+					  </div>
 					</div>
 					<div class=\"clearfix\"></div>
 				  </div>";
@@ -137,18 +147,20 @@
               <input id="np-category" type="radio" name="category" value="3">funny stories
             </div>
             <div class="form-row">
-              <label for="np-image" class="top">Image: </label>
-              <input id="np-image" name="np-image" class="button" type="file"/>
+              <label for="profilePicUpload" class="top" >Image: </label>
+              <input type="file" name="np-image" id="profilePicUpload" class="button" accept="image/*" />
+			  
             </div>
 
-            <input type="submit"/>
+            <input type="submit" value = "Post"/>
           </form>
         </div>
 
         <?php } else { ?>
         <p class="centerP">Please <a href="login.php">LOGIN</a> to make a post</p>
+		<img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
         <?php } ?>
-        <img id = "sleepy" src="images/ozzy.jpg" alt="sleepy kitty" />
+        
       </article>
     </div>
 

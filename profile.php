@@ -6,7 +6,7 @@
   $title = "Profile";
 
   if (empty($_SESSION['username'])) {
-    header("Location: cosc360.ok.ubc.ca/33354144/login.php");
+    header("Location: login.php");
   }
 ?>
 
@@ -35,15 +35,18 @@
       $fname = $row['fname'];
       $lname = $row['lname'];
       $pic = $row['profilePic'];
-
-      print ""
-      . "<article id=\"centerProfile\">"
-      .   "<div id=\"profileEntry\">"
-      .	    "<figure>"
-      .	      "<img src=\"$pic\" alt=\"profile picture\" />"
-      .	    "</figure>"
-      .	    "<div>"
-      .	      "<h3>$fname $lname</h3>";
+	  $fullName = $fname . " " . $lname;
+     echo"
+    <article id=\"centerProfile\">
+		<div id=\"profileEntry\" >
+     	    <figure>
+				<a href=\"" . $pic . "\"data-lightbox=\"profilePic\" data-title=\"" . $fullName . "\">
+				<img src=" . $pic . " alt=\"profile picture\" class = \"postPic\"/></a>
+			</figure>
+       <div>
+		<h3>" . $fname . " " . $lname . "</h3>";
+	  
+	 
       if (!$no_edit){
         print "<p id=\"edit\"><a href = \"edit.php\">edit</a></p>";
       }
@@ -54,7 +57,7 @@
       .   "<div id=\"posts\">";
     }
 
-    $stat = $connection->query("select post.postid, post.postDate, post.pic, post.title, sum(comid) as numCom from post left join comments on comments.postid = post.postid where post.author = '$user' group by post.postid, post.postDate, post.pic, post.title limit 20");
+    $stat = $connection->query("select post.postid, post.postDate, post.pic, post.title, count(comid) as numCom from post left join comments on comments.postid = post.postid where post.author = '$user' group by post.postid, post.postDate, post.pic, post.title limit 20");
 
     while ($row = $stat->fetch_assoc()) {
       $post_id = $row['postid'];
@@ -64,9 +67,9 @@
       $numComments = empty($row['numCom']) ? 0 : $row['numCom'];
       $comment = $numComments == 1 ? "comment" : "comments";
       echo"
-        <div class=\"postEntry\">
-          <figure class = \"postPic\">
-          <img src=\"$postPic\" alt=\"Post Picture\"  />  
+        <div class=\"entry\" >
+          <figure >
+          <a href =\"post.php?id=$post_id\"><img src=\"$postPic\" alt=\"Post Picture\" class = \"postPic\" /></a>  
           </figure>
           <div>
           <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $title . "</a></h2> 
@@ -88,6 +91,6 @@
 	?>
 
     <?php include ('inc/footer.inc.php'); ?>
-
+	<script src="js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

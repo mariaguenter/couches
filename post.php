@@ -20,41 +20,7 @@
     $id = preg_replace('/\D/s', '', htmlspecialchars($_GET['id']));
   }
   if (empty($id)) {
-    if (isset($_SESSION['username'])) { ?>
-      <form id="side-bar-new-post" method="post" action="newPost.php" enctype="multipart/form-data">
-        <div class="form-row">
-          <label for="np-title" class="top">Title: </label>
-          <input id="np-title" name="np-title" type="text" maxlength="30" required/>
-        </div>
-        <div class="form-row">
-          <label for="np-content" class="top">Content: </label>
-          <textarea id="np-content" name="np-content" placeholder="max 800 characters" maxlength="900" required></textarea>
-        </div>
-        <div class="form-row">
-          <label for="np-category" class="top">Category: </label>
-          <input id="np-category" type="radio" name="category" value="1" required>health
-          and nutrition<br>
-          <input id="np-category" type="radio" name="category" value="2">behaviour<br>
-          <input id="np-category" type="radio" name="category" value="3">funny
-          stories
-        </div>
-        <div class="form-row">
-          <label for="np-image" class="top">Image: </label>
-          <input id="np-image" name="np-image" class="button" type="file"/>
-        </div>
-
-        <input type="submit"/>
-      </form>
-      </div>
-      <div class="side-bar-login-form">
-
-      </div>
-
-      <?php
-    }
-    else {
-      header("Location: cosc360.ok.ubc.ca/33354144/login.php");
-    }
+    header("Location: home.php");
   }
   else{
     require 'connection.php';
@@ -69,6 +35,7 @@
     $date = $row['postDate'];
     $pic = htmlspecialchars($row['pic']);
     $content = htmlentities($row['content']);
+	$rating = $row['rating'];
 
     if ($category == 1){
       $category_name = "health and nutrition";
@@ -86,49 +53,42 @@
 
 echo"
           <div class=\"entry\">
-            <figure class = \"postPic\">
-              <img src=\" " . $pic . "\" alt=\" " . $title . "\" />
+            <figure >
+			<a href=\"" . $pic . "\"data-lightbox=\"postPic\" data-title=\"" . $title . "\">
+              <img src=\" " . $pic . "\" alt=\" " . $title . "\" class = \"postPic\"/></a>
             </figure>
             <div>
-              <h2>" . $title . "</h2>
+              <h1>" . $title . "</h1>
               <p><a href=\"profile.php?user=$author\">" . $author . "</a>    |       " .  $date . "</p>  <!--LINK TO AUTHORS PROFILE?? HOWWWW-->
             </div>
+			 <div id = \"ratings2\">
+				<a  href = \"upRate.php?id=$id\"><img class = \"ratings1\" src=\"images/rateup.png\"  /></a>
+				<img class = \"ratings2\" src=\"images/rating.png\" />
+				<p>" . $rating . "</p>
+			</div>
 			<div class=\"clearfix\"></div>
-          </div>";
+          ";
 
 echo" 
-		<div>
+		
+		
 		<p>" . $content . "</p>
 		</div>
-		<h2>Comments:</h2>";
+		<h1 id = \"commentsHeading\">Comments:</h1>
+		<div id = \"commentsDiv\">";
 
 		  //show all comments on the post
-		  
 
-	$sql2 = "SELECT * FROM comments WHERE postid = " . $id;
-  $stat = $connection->query($sql2);
-    
-	while($row = $stat->fetch_assoc()){
-
-		$commentAuthor = htmlspecialchars($row['author']);
-		$commentContent = $row['content'];
-		
-		echo "
-			<p><a href='/profile.php?user=$commentAuthor'>$commentAuthor</a></p>
-			<p>" . $commentContent . "</p>
-			<br>
-		";
-			
-	}
-
+	echo"</div>";
+	
 	if (!empty($_SESSION['username'])) { ?>
 	
 	
-	<form method = "post" action = "newComment.php">
+	<form method = "post" action = "newComment.php" id = "commentForm">
 		<textarea id="comment" name="comment" placeholder="max 500 characters" maxlength = "500"  required></textarea>
 		<input type = "hidden" name = "id" value = <?php print $id; ?> >
 		<input type = "hidden" name = "username" value = <?php print $_SESSION['username']; ?> >
-		<input type="submit">
+		<input type="submit"  value = "comment">
 	</form>
 	
 	
@@ -136,9 +96,39 @@ echo"
 	<?php } ?>
 	
 	
+	
+<script>
+//set interval timers to trigger the refresh.  Here the callback function will
+//be called when the timer fires
+
+var var2 = setInterval(timer2, 1000);
+
+
+
+//this is the callback function that will be run when timer2 runs.
+//This will contact the server at the specified url and wait for the data
+//In this case time.php just sends the time back as text but you could
+//use this to pull data from a database by changing the php page receiving
+//the async request.
+function timer2() {
+    var results = $.get("ajaxComments.php", {id: <?=$id?>});
+    results.done(function(data) {
+                          console.log(data);
+                          document.getElementById("commentsDiv").innerHTML = data;
+                                });
+    results.fail(function(jqXHR) {console.log("Error: " + jqXHR.status);});
+    results.always(function() {console.log("done");});
+
+
+}
+</script>
+
 <?php
+	$connection->close();
   require 'inc/footer.inc.php';
 ?>
 
+	
+	<script src="js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

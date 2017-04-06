@@ -12,7 +12,8 @@
     <div id="parent">
       <div id="contactMain">
 
-        <form action="processlogin.php" method = "post" id = "loginForm">
+        <form action="processlogin.php" method = "post" >
+		<div class = "formBorder"> 
           <legend>login</legend>
           <p>
             <label class = "contactFields">username:</label>
@@ -23,6 +24,7 @@
             <input type="password" name="password" maxlength = "15" required/>
           </p>
           <input type = "submit" value="login" />
+		 </div> 
         </form>
 
         <p id="forgot">
@@ -30,7 +32,8 @@
         </p>
         <br/>
 
-        <form action="newUser.php" method = "post" id = "createAccountForm" enctype="multipart/form-data">
+        <form action="newUser.php" method = "post" id = "createAccountFormUse" enctype="multipart/form-data">
+		<div class = "formBorder">
           <legend>create an account</legend>
           <p>
             <label class = "contactFields">first name</label>
@@ -49,8 +52,8 @@
             <input type="text" name="username" maxlength = "30"  required/>
           </p>
           <p>
-            <label class = "contactFields">password:</label>
-            <input type="password" name="password" maxlength = "15" placeholder="7-15 chars, min 1 number" required />
+            <label class = "contactFields"> password: <a  target="_blank" title="Currently debugging javascript. Please use password1 as your password."><img src="images/questionmark.png" height="14px"/></a></label>
+            <input type="password" name="password" maxlength = "15" required />
           </p>
           <p>
             <label class = "contactFields">confirm password:</label>
@@ -70,10 +73,11 @@
             <input type="text" name="answer" maxlength = "30"  required/>
           </p>
           <p>
-            <label class = "contactFields">picture:</label>
+            <label class = "contactFieldsPic">picture:</label>
             <input type="file" name="profilePic" id="profilePicUpload" class="button" accept="image/*" />
           </p>
           <input type = "submit" value="create account"/>
+		</div>
         </form>
 
       </div>

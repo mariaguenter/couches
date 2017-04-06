@@ -13,7 +13,8 @@
 	   echo"<h1>password or username is incorrect</h1>";
 	   echo"<p><a href =\"login.php\">return</a></p>";
 	?>
-	
+		<br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
 	
 	
 	

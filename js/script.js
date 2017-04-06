@@ -45,7 +45,7 @@ $(document).ready(function() {
 
         if ($(this).hasClass('error')) {
           valid = false;
-          error = "All errors must be resolved.";
+          error = "Passwords do not match";
         }
       }
     });
@@ -57,9 +57,9 @@ $(document).ready(function() {
 
   });
 
-  $('input[name="newpassword"], #createAccountForm input[name="password"]').on('keyup', function(e) {
+  $('input[name="newpassword"], #createAccountFormUse input[name="password"]').on('keyup', function(e) {
     // Valid password regex testers
-    var pass_strength = /((?=.*\d)(?=.*[a-z]).{7,15})/gm;
+    var pass_strength = new RegExp("(?=.*\d)(?=.*[a-z]).{7,15}");
 
     var current_val = $(this).val();
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
   $('input[name="confirmPassword"]').on('keyup', function(e) {
     var confirmation_pass = $(this).val();
-    var main_pass = $('input[name="newpassword"]').val() || $('#createAccountForm input[name="password"]').val();
+    var main_pass = $('input[name="newpassword"]').val() || $('#createAccountFormUse input[name="password"]').val();
 
     if (confirmation_pass !== main_pass) {
       $(this).addClass('error');

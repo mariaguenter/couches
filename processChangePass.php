@@ -13,27 +13,28 @@ if (!isset($_SESSION)) {
 			$user = $connection->real_escape_string($_SESSION['username']);
 
       $old = md5($old);
-      $stat = $connection->query("select * from user where username='$user' and password = '$old'");
+      $stat = $connection->query("select * from user where username='$user' and pass = '$old'");
 
       while ($row = $stat->fetch_assoc()) {
         $exists = true;
+		
         break;
       }
 
       if($exists){
         if($new == $new2){
           $pass = md5($new);
-          $stat = $connection->query("update user set password = '$pass' where username='$user'");
+          $stat = $connection->query("update user set pass = '$pass' where username='$user'");
+		  header("Location: profile.php"); 
         }else{
-          header("Location: cosc360.ok.ubc.ca/33354144/noMatch.php");
+          header("Location: noMatch.php");
         }
       }else{
-        header("Location: cosc360.ok.ubc.ca/33354144/badPass.php");
+        header("Location: badPass.php");
       }
 
-      $stat->close();
 
 		}
 	}
 
-	header("Location: cosc360.ok.ubc.ca/33354144/profile.php");
+	

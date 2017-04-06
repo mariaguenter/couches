@@ -5,7 +5,7 @@
 
   $title = "Edit Profile";
   if (empty($_SESSION['username'])){
-    header("Location: cosc360.ok.ubc.ca/33354144/login.php"); 
+    header("Location: login.php"); 
   }
 ?>
 
@@ -26,7 +26,7 @@
       </p>
       <input type = "submit" value = "submit"/>
     </form>
-    <form action="processChangePassword.php" method = "post" id = "createAccountForm">
+    <form action="processChangePass.php" method = "post" id = "createAccountForm">
       <h1>change password</h1>
         <label class = "contactFields">old password:</label>
         <input type="password" name="oldpassword" maxlength = "15" required />
@@ -35,18 +35,19 @@
         <input type="password" name="newpassword" maxlength = "15" required />
 		<br>
         <label class = "contactFields">confirm password:</label>
-        <input type="password" name="confirmPassword" maxlength = "15"  required/>
+        <input type="password" name="confirmpassword" maxlength = "15"  required/>
 		<br>
       <input type = "submit" value="submit"/>
     </form>
     <form action="processChangePic.php" method = "post" id = "createAccountForm" enctype="multipart/form-data">
       <h1>change profile picture</h1>
       <p>
-        <label class = "contactFields">picture:</label>
+        <label class = "contactFieldsPic">picture:</label>
         <input type="file" name="profilePic" id="profilePicUpload" class="button" accept="image/*" />
       </p>
       <input type = "submit" value="submit"/>
     </form>
+
     <?php require 'inc/footer.inc.php'; ?>
 
   </body>

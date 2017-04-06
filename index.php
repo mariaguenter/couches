@@ -1,4 +1,4 @@
 <?php
 
 static $title = "index";
-header("Location: /home"); //change?
+header("Location: home.php"); 

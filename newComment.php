@@ -8,10 +8,10 @@
 			$postid = $_POST['id'];
 			$username = $connection->real_escape_string($_POST['username']);
 
-      $connection->query("insert into comments(content, author, postid) values ($content,$username,$postid)");
+      $connection->query("insert into comments(content, author, postid) values ('$content','$username',$postid)");
 
 			$connection->close();
-			header("Location: cosc360.ok.ubc.ca/33354144/post.php?id=$postid");
+			header("Location: post.php?id=$postid");
 		}
 	}
 

@@ -7,6 +7,7 @@
 
   session_unset();
   session_destroy();
+ 
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +16,10 @@
 
   <body>
     <?php require 'inc/header.inc.php'; ?>
-
+	<br>
     <h1>you are now signed out</h1>
-
+	</body>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php include 'inc/footer.inc.php'; ?>
-  </body>
+  
 </html>

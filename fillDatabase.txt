@@ -6,7 +6,7 @@ captain
 Mr
 Boss
 bossman@gmail.com
-admin123
+admin1234
 If you could name your cat after a celebrity, who would it be?
 Ozzy Osbourne
 /images/admin.jpg
@@ -36,7 +36,7 @@ kitties555
 Sally
 Joe
 kitty@gmail.com
-pass123
+password1
 What is the breed of your current cat?
 Tabby
 /images/ozzy5.jpg
@@ -47,7 +47,7 @@ FALSE
 
 
 ilovecats
-/images/ozzy7.jpg
+/images/public/ozzy7.jpg
 1
 "Lots of Excercise"
 "My cat has been going outside for like 9 hours a day to run around. I bet he's way more fit and athletic than your cat."
@@ -76,3 +76,7 @@ kitties555
 3
 "Freckles"
 "Insert funny story about how great my cat is."
+
+
+
+https://www.jotform.com/answers/433094-Questionmark-Button-to-display-hint-details-during-hover-or-click

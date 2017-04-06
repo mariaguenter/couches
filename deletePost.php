@@ -4,7 +4,7 @@
   }
 
   if (empty($_SESSION['admin'])) {
-    header("Location: /home.php");
+    header("Location: home.php");
   }
 
 	require 'connection.php';
@@ -12,7 +12,7 @@
 				$postid = $_POST['postid'];
 				if($stat = $connection->query("delete from post where postid = $postid")){
 
-				  header('Location: /admin.php');
+				  header('Location: admin.php');
 				}
 
 				$connection->close();

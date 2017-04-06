@@ -12,6 +12,8 @@
     <?php require 'inc/header.inc.php'; ?>
    	<h1>user with this email or username already exists!</h1>
 	<p><a href = "login.php">return to login</a></p>
+	<br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br>
 	<?php include ('inc/footer.inc.php'); ?>
 
   </body>

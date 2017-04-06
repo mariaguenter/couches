@@ -13,7 +13,8 @@ if (!isset($_SESSION)) {
       $target_dir = "images/public/";
       $target_file = $target_dir . basename($_FILES["profilePic"]["name"]);
       $uploadOk = 1;
-      $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+ 
+	  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
       // Check if image file is a actual image or fake image
       $check = getimagesize($_FILES["profilePic"]["tmp_name"]);
@@ -42,7 +43,7 @@ if (!isset($_SESSION)) {
       }
 
       // Check file size
-      if ($_FILES["profilePic"]["size"] > 2048000) {
+      if ($_FILES["profilePic"]["size"] > 5048000) {
         $error = "Sorry, your file is too large.";
         $uploadOk = 0;
       }
@@ -69,4 +70,4 @@ if (!isset($_SESSION)) {
 	}	
 	
 	
-	header("Location: cosc360.ok.ubc.ca/33354144/profile.php");
+	header("Location: profile.php");

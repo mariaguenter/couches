@@ -13,4 +13,6 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/thumbnail.png">
+  <link rel="stylesheet" href="css/lightbox.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
