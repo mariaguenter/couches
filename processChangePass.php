@@ -6,10 +6,10 @@ if (!isset($_SESSION)) {
 	require 'connection.php';
 	$exists = false;
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		if (isset($_POST['oldpassword']) && isset($_POST['newpassword']) && isset($_POST['confirmpassword']) ){
+		if (isset($_POST['oldpassword']) && isset($_POST['newpassword']) && isset($_POST['confirmPassword']) ){
 			$new = $_POST['newpassword'];
 			$old = $_POST['oldpassword'];
-			$new2 = $_POST['confirmpassword'];
+			$new2 = $_POST['confirmPassword'];
 			$user = $connection->real_escape_string($_SESSION['username']);
 
       $old = md5($old);

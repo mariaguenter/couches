@@ -102,23 +102,38 @@
 				$post_title = htmlentities($row['title']);
 				$numComments = empty($row['numCom']) ? 0 : $row['numCom'];
 				$rating = $row['rating'];
-				echo"
-				  <div class=\"entry\">
-					<figure>
-					  <a href =\"post.php?id=$post_id\"><img class = \"postPic\" src=\"$postPic\" alt=\"Post Picture\" /></a> 
-					</figure>
-					<div>
-					  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
-					  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
-					  <p class=\"comments\">" . $numComments . " comments</p>
-					  <div id = \"ratings\">
-						<a  href = \"upRate.php?id=$post_id\"><img class = \"ratings1\" src=\"images/rateup.png\"  /></a>
-						<img class = \"ratings2\" src=\"images/rating.png\" />
-						<p>" . $rating . "</p>
-					  </div>
-					</div>
-					<div class=\"clearfix\"></div>
-				  </div>";
+				if (!empty($_SESSION['username'])) {
+					echo"
+					  <div class=\"entry\">
+						<figure><a href =\"post.php?id=$post_id\">
+						  <img class = \"postPic\" src=\"$postPic\" alt=\"Post Picture\" />
+						</a></figure>
+						<div>
+						  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
+						  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
+						  <p class=\"comments\">" . $numComments . " comments</p>
+						  <div id = \"ratings\">
+							<a  href = \"upRate.php?id=$post_id\"><img class = \"ratings1\" src=\"images/rateup.png\"  /></a>
+							<img class = \"ratings2\" src=\"images/rating.png\" />
+							<p>" . $rating . "</p>
+						  </div>
+						</div>
+						<div class=\"clearfix\"></div>
+					  </div>";
+				}else{
+					echo"					  
+					<div class=\"entry\">
+						<figure><a href =\"post.php?id=$post_id\">
+						  <img class = \"postPic\" src=\"$postPic\" alt=\"Post Picture\" />
+						</a></figure>
+						<div>
+						  <h2 id = \"first\"><a href =\"post.php?id=$post_id\">" . $post_title . "</a></h2>
+						  <p><a href=\"profile.php?user=$author\">" . $author . "</a>       |   ". "     " . $date . "</p>
+						  <p class=\"comments\">" . $numComments . " comments</p>
+						</div>
+						<div class=\"clearfix\"></div>
+					  </div>";
+				}
 			}
 		}
 		?>
@@ -147,7 +162,7 @@
               <input id="np-category" type="radio" name="category" value="3">funny stories
             </div>
             <div class="form-row">
-              <label for="profilePicUpload" class="top" >Image: </label>
+              <label for="profilePicUpload" class="top" >Image: <a  target="_blank" title="jpg, jpeg, png, and gif only. Must be under 4MB"><img src="images/questionmark.png" height="14px"/></a></label>
               <input type="file" name="np-image" id="profilePicUpload" class="button" accept="image/*" />
 			  
             </div>

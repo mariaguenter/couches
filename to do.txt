@@ -1,21 +1,13 @@
 TO DO LIST:
 
-GOALS: 	ALL OF DELIVERABLE 3 DONE BY WEDNESDAY april 5!!!!!
-
-Legend:	* - Maria	^ - Mat		*^* - Both
-
-Delete them as you finish
-
 
 
 DELIVERABLE 3
 --------------
 
-^ processContact.php - make it send an email to kitty threads eamil (email: kitty.threads.contact@gmail.com password: passpass)
-^ finish forgot my password link (send an email with token n stuff...)
+^ test js on new password page
 
-
-* summary of features implemented (maria)
+* summary of features implemented 
 * 6 page report stuff (styling flourishes -  pop up that asks "are you sure?" when deleting user/post; .htaccess; clean urls; custom 404; fancy search bar; profile/post pic; javascript buttons; ? password)
 
 
@@ -26,5 +18,3 @@ password1
 
 
 
-
-anything else on addition list (maybe try to do one thing from the list)

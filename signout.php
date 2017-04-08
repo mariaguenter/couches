@@ -18,6 +18,7 @@
     <?php require 'inc/header.inc.php'; ?>
 	<br>
     <h1>you are now signed out</h1>
+	<p><a href = "login.php">login</a></p>
 	</body>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php include 'inc/footer.inc.php'; ?>

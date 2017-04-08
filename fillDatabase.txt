@@ -15,8 +15,8 @@ TRUE
 ilovecats
 Barb
 Neuman
-cats@gmail.com
-pass123
+events.qscu@gmail.com
+password1
 What is the breed of your current cat?
 Tabby
 /images/ozzy3.jpg	
@@ -35,7 +35,7 @@ FALSE
 kitties555
 Sally
 Joe
-kitty@gmail.com
+kitties5559@gmail.com passpass
 password1
 What is the breed of your current cat?
 Tabby

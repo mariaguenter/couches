@@ -31,11 +31,11 @@
         <label class = "contactFields">old password:</label>
         <input type="password" name="oldpassword" maxlength = "15" required />
 		<br>
-        <label class = "contactFields">new password:</label>
+        <label class = "contactFields">new password: <a  target="_blank" title="Currently debugging javascript. Please use password1 as your password."><img src="images/questionmark.png" height="14px"/></a></label>
         <input type="password" name="newpassword" maxlength = "15" required />
 		<br>
         <label class = "contactFields">confirm password:</label>
-        <input type="password" name="confirmpassword" maxlength = "15"  required/>
+        <input type="password" name="confirmPassword" maxlength = "15"  required/>
 		<br>
       <input type = "submit" value="submit"/>
     </form>
@@ -47,6 +47,7 @@
       </p>
       <input type = "submit" value="submit"/>
     </form>
+	<br><br><br>
 
     <?php require 'inc/footer.inc.php'; ?>
 
