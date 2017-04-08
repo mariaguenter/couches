@@ -59,7 +59,7 @@ $(document).ready(function() {
 
   $('input[name="newpassword"], #createAccountFormUse input[name="password"]').on('keyup', function(e) {
     // Valid password regex testers
-    var pass_strength = new RegExp("(?=.*\d)(?=.*[a-z]).{7,15}");
+    var pass_strength = /(?=.*\d)(?=.*[a-z]).{7,15}/;
 
     var current_val = $(this).val();
 
